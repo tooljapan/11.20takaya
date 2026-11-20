@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>タカヤ式スポーツ中古せどり実践ポータル｜購入者限定特典（1ヶ月限定公開）</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Noto Sans JP & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', '"Noto Sans JP"', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              950: '#080D1A',
+              900: '#0F172A',
+              800: '#1E293B',
+              700: '#334155',
+            },
+            energy: {
+              500: '#F97316',
+              600: '#EA580C',
+            },
+            profit: {
+              400: '#34D399',
+              500: '#10B981',
+              600: '#059669',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-color: #080D1A;
+      color: #F8FAFC;
+      -webkit-tap-highlight-color: transparent;
+    }
+    /* カスタムスクロールバー */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0F172A;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #F97316;
+    }
+    .glass-card {
+      background: rgba(30, 41, 59, 0.72);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+    }
+    .tab-active {
+      background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+      color: #FFFFFF;
+      box-shadow: 0 4px 20px rgba(249, 115, 22, 0.35);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-energy-500 selection:text-white">
+
+  <!-- トップ限定公開バナー -->
+  <div class="bg-gradient-to-r from-energy-600 via-energy-500 to-amber-500 text-white text-xs sm:text-sm font-bold py-2 px-4 text-center shadow-md">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2">
+      <span class="inline-flex items-center gap-1 bg-navy-950/30 px-2.5 py-0.5 rounded-full text-[11px] sm:text-xs tracking-wide">
+        <i data-lucide="flame" class="w-3.5 h-3.5 text-yellow-200"></i> 購入者限定特典
+      </span>
+      <span>1ヶ月限定特別公開ポータル｜AI・型番リサーチ勢を出し抜く「現場の目利き・リアル生情報」全集</span>
+    </div>
+  </div>
+
+  <!-- ヘッダー＆全体KPIサマリー -->
+  <header class="bg-navy-900/90 border-b border-slate-800/80 sticky top-0 z-30 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+        <!-- ブランドタイトル -->
+        <div class="flex items-start sm:items-center justify-between gap-3">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-profit-500/20 text-profit-400 border border-profit-500/30">
+                TAKAYA METHOD ARCHIVE
+              </span>
+              <span class="text-xs text-slate-400">公開期限：配布日より30日間限定</span>
+            </div>
+            <h1 class="text-lg sm:text-2xl font-black tracking-tight text-white mt-1 flex items-center gap-2">
+              <span class="text-energy-500">スポーツ中古せどり</span> 実践目利きポータル
+            </h1>
+          </div>
+          <!-- 初心者入門セット プレミアム導線ボタン（スマホ・PC共通） -->
+          <button
+            onclick="switchTab('starter')"
+            class="shrink-0 bg-gradient-to-r from-amber-400 via-yellow-300 to-profit-400 hover:from-amber-300 hover:to-profit-300 text-navy-950 font-black text-xs sm:text-sm px-3.5 sm:px-4 py-2.5 rounded-xl shadow-lg shadow-amber-500/25 flex items-center gap-2 transition transform hover:-translate-y-0.5 cursor-pointer border border-yellow-200/80"
+          >
+            <span class="text-base leading-none">🔰</span>
+            <div class="text-left leading-tight">
+              <div class="text-[10px] font-extrabold text-navy-900/80">未経験者はまずここから予習！</div>
+              <div>初心者入門セット</div>
+            </div>
+            <i data-lucide="arrow-right-circle" class="w-4 h-4 text-navy-950"></i>
+          </button>
+        </div>
+
+        <!-- 全体KPIミニダッシュボード -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
+          <div class="bg-navy-950/80 border border-slate-800 rounded-xl px-3 py-2">
+            <div class="text-[11px] text-slate-400 flex items-center gap-1">
+              <i data-lucide="database" class="w-3 h-3 text-energy-500"></i> 収録実売データ
+            </div>
+            <div class="font-display text-base sm:text-lg font-extrabold text-white mt-0.5">
+              60 <span class="text-xs font-normal text-slate-400">商品</span>
+            </div>
+          </div>
+          <div class="bg-navy-950/80 border border-slate-800 rounded-xl px-3 py-2">
+            <div class="text-[11px] text-slate-400 flex items-center gap-1">
+              <i data-lucide="trending-up" class="w-3 h-3 text-profit-400"></i> 平均純利益
+            </div>
+            <div id="kpi-avg-profit" class="font-display text-base sm:text-lg font-extrabold text-profit-400 mt-0.5">
+              ¥9,193
+            </div>
+          </div>
+          <div class="bg-navy-950/80 border border-slate-800 rounded-xl px-3 py-2">
+            <div class="text-[11px] text-slate-400 flex items-center gap-1">
+              <i data-lucide="percent" class="w-3 h-3 text-amber-400"></i> 平均利益率
+            </div>
+            <div id="kpi-avg-margin" class="font-display text-base sm:text-lg font-extrabold text-amber-400 mt-0.5">
+              57.3%
+            </div>
+          </div>
+          <div class="bg-navy-950/80 border border-slate-800 rounded-xl px-3 py-2">
+            <div class="text-[11px] text-slate-400 flex items-center gap-1">
+              <i data-lucide="award" class="w-3 h-3 text-energy-500"></i> 最高一撃利益
+            </div>
+            <div class="font-display text-base sm:text-lg font-extrabold text-energy-500 mt-0.5">
+              ¥92,652
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- メインナビゲーション（5タブ） -->
+      <nav class="mt-4 flex overflow-x-auto no-scrollbar gap-2 pb-1" role="tablist">
+        <button onclick="switchTab('starter')" id="tab-btn-starter" class="bg-gradient-to-r from-amber-500/20 to-profit-500/20 hover:from-amber-500/30 hover:to-profit-500/30 border border-amber-400/40 text-amber-300 flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all cursor-pointer">
+          <span>🔰</span>
+          <span>初心者入門セット</span>
+        </button>
+        <button onclick="switchTab('db')" id="tab-btn-db" class="tab-active flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all cursor-pointer">
+          <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+          <span>実売60選データベース</span>
+        </button>
+        <button onclick="switchTab('checklist')" id="tab-btn-checklist" class="bg-navy-800/80 hover:bg-navy-700 text-slate-300 flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all cursor-pointer">
+          <i data-lucide="check-square" class="w-4 h-4 text-profit-400"></i>
+          <span>現場目利きチェックリスト</span>
+        </button>
+        <button onclick="switchTab('articles')" id="tab-btn-articles" class="bg-navy-800/80 hover:bg-navy-700 text-slate-300 flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all cursor-pointer">
+          <i data-lucide="book-open" class="w-4 h-4 text-sky-400"></i>
+          <span>限定ノウハウ記事 (6本)</span>
+        </button>
+        <button onclick="switchTab('videos')" id="tab-btn-videos" class="bg-navy-800/80 hover:bg-navy-700 text-slate-300 flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all cursor-pointer">
+          <i data-lucide="play-circle" class="w-4 h-4 text-energy-500"></i>
+          <span>限定解説動画 (8本)</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ領域 -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <!-- ==========================================
+         TAB 0: 🔰 初心者入門セット（現場デビュー予習ロードマップ）
+    ========================================== -->
+    <section id="panel-starter" class="hidden space-y-6">
+      <!-- イントロ＆進捗ヒーローバナー -->
+      <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-navy-900 via-navy-800 to-navy-950 border border-amber-400/40 p-5 sm:p-7 shadow-2xl">
+        <div class="absolute -right-12 -top-12 w-48 h-48 rounded-full bg-amber-400/10 blur-2xl pointer-events-none"></div>
+        <div class="absolute -left-12 -bottom-12 w-48 h-48 rounded-full bg-profit-500/10 blur-2xl pointer-events-none"></div>
+
+        <div class="relative flex flex-col lg:flex-row lg:items-center justify-between gap-5">
+          <div class="space-y-2 max-w-2xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/15 border border-amber-400/40 text-amber-300 text-xs font-extrabold">
+              <span>🔰</span> <span>未経験者専用・最短現場デビューカリキュラム（所要20分）</span>
+            </div>
+            <h2 class="text-xl sm:text-3xl font-black text-white tracking-tight">
+              初心者入門セット｜現場デビュー予習ロードマップ
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              「スポーツのルールや型番が全く分からない…」という状態からでも、以下の<strong class="text-amber-300">4つのステップ</strong>を順番に予習するだけで、今日からリサイクルショップで利益商品を抜けるようになります。
+            </p>
+          </div>
+
+          <!-- 予習完了プログレスカード -->
+          <div class="bg-navy-950/90 border border-amber-400/30 rounded-2xl p-4 min-w-[250px] space-y-2.5 shrink-0">
+            <div class="flex items-center justify-between text-xs">
+              <span class="font-bold text-slate-300">デビュー準備度</span>
+              <span id="starter-progress-text" class="font-display font-black text-amber-300 text-sm">0 / 4 STEP完了</span>
+            </div>
+            <div class="w-full h-2.5 bg-slate-800 rounded-full overflow-hidden">
+              <div id="starter-progress-bar" class="h-full bg-gradient-to-r from-amber-400 to-profit-400 transition-all duration-300" style="width: 0%"></div>
+            </div>
+            <p id="starter-progress-msg" class="text-[11px] text-slate-400">全4ステップを完了して店舗へGO！</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4ステップ・ロードマップ本体 -->
+      <div class="space-y-5">
+
+        <!-- STEP 1 -->
+        <div id="starter-card-1" class="glass-card rounded-2xl p-5 sm:p-6 border-l-4 border-l-amber-400 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+            <div class="flex items-center gap-3">
+              <span class="px-3 py-1 rounded-xl bg-amber-400 text-navy-950 font-display font-black text-xs sm:text-sm">STEP 1</span>
+              <div>
+                <div class="text-[11px] text-amber-300 font-bold">所要時間：約5分｜まずは思い込みを捨てる</div>
+                <h3 class="text-base sm:text-xl font-black text-white">マインドセット＆「なぜ初心者が勝てるのか」を知る</h3>
+              </div>
+            </div>
+            <button
+              onclick="toggleStarterStep(1)"
+              id="starter-btn-1"
+              class="self-start sm:self-auto px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-200 flex items-center gap-1.5 transition cursor-pointer"
+            >
+              <i data-lucide="circle" class="w-4 h-4"></i> <span>STEP 1 完了にする</span>
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+            <div class="bg-navy-950/80 border border-slate-800 rounded-xl p-4 space-y-2">
+              <div class="font-bold text-amber-300 flex items-center gap-1.5">
+                <i data-lucide="zap" class="w-4 h-4"></i> 型番・競技経験は1ミリも不要！
+              </div>
+              <p class="text-slate-300 leading-relaxed">
+                一般的なせどらーはバーコードや型番がない商品を見ると「目利きできない」と勝手に撤退します。しかし、現場で見るべき基準は<strong>「人気メーカーか？」「ヒビ・破れがなく通常使用できるか？」の2点だけ</strong>です。
+              </p>
+            </div>
+            <div class="bg-navy-950/80 border border-slate-800 rounded-xl p-4 space-y-2">
+              <div class="font-bold text-profit-400 flex items-center gap-1.5">
+                <i data-lucide="truck" class="w-4 h-4"></i> メルカリ便の全国一律送料が最大の武器
+              </div>
+              <p class="text-slate-300 leading-relaxed">
+                バットやラケット、大型練習器具も「らくらくメルカリ便」なら全国一律の格安送料で発送可能。ライバルが敬遠するサイズ感だからこそ、1撃3,000円〜1万円超の利益がゴロゴロ落ちています。
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2.5 pt-1">
+            <button onclick="jumpToArticle(1)" class="px-4 py-2.5 rounded-xl bg-sky-500/20 hover:bg-sky-500/30 border border-sky-500/40 text-sky-300 text-xs font-bold flex items-center gap-2 transition cursor-pointer">
+              <i data-lucide="book-open" class="w-4 h-4"></i> 限定記事①（独占市場の理由）を読む
+            </button>
+            <button onclick="switchTab('videos')" class="px-4 py-2.5 rounded-xl bg-energy-500/20 hover:bg-energy-500/30 border border-energy-500/40 text-energy-400 text-xs font-bold flex items-center gap-2 transition cursor-pointer">
+              <i data-lucide="play-circle" class="w-4 h-4"></i> 限定動画①（全体像レクチャー）を見る
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div id="starter-card-2" class="glass-card rounded-2xl p-5 sm:p-6 border-l-4 border-l-profit-400 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+            <div class="flex items-center gap-3">
+              <span class="px-3 py-1 rounded-xl bg-profit-400 text-navy-950 font-display font-black text-xs sm:text-sm">STEP 2</span>
+              <div>
+                <div class="text-[11px] text-profit-400 font-bold">所要時間：約5分｜利益率を60%超に跳ね上げる</div>
+                <h3 class="text-base sm:text-xl font-black text-white">利益を倍増させる「2大必勝パターン」を覚える</h3>
+              </div>
+            </div>
+            <button
+              onclick="toggleStarterStep(2)"
+              id="starter-btn-2"
+              class="self-start sm:self-auto px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-200 flex items-center gap-1.5 transition cursor-pointer"
+            >
+              <i data-lucide="circle" class="w-4 h-4"></i> <span>STEP 2 完了にする</span>
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+            <div class="bg-navy-950/80 border border-slate-800 rounded-xl p-4 space-y-2">
+              <div class="font-bold text-profit-400 flex items-center gap-1.5">
+                <i data-lucide="layers" class="w-4 h-4"></i> 必勝パターン①：セット売り・まとめ売り
+              </div>
+              <p class="text-slate-300 leading-relaxed">
+                単品500円〜1,000円の商品（少年用バット2本、エルボー＋レッグガード、左打者ヘルメット2個、練習バット複数本など）を店舗内で組み合わせて出品。<strong>送料を1回分に圧縮し、ライバル不在の独占ページ</strong>を作ります。
+              </p>
+            </div>
+            <div class="bg-navy-950/80 border border-slate-800 rounded-xl p-4 space-y-2">
+              <div class="font-bold text-amber-300 flex items-center gap-1.5">
+                <i data-lucide="sparkles" class="w-4 h-4"></i> 必勝パターン②：劣化グリップ＆ビニール巻き救出
+              </div>
+              <p class="text-slate-300 leading-relaxed">
+                テニスラケットやバットで「グリップがベタつく・剥がれている」ため店舗がビニールラップを巻いて550円〜880円で放置している品はお宝！<strong>100円以下の新品グリップテープをおまけ添付</strong>すれば減額なしで高値即売れします。
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2.5 pt-1">
+            <button onclick="jumpToDbWithTactic('セット売り・まとめ売り')" class="px-4 py-2.5 rounded-xl bg-profit-600 hover:bg-profit-500 text-white text-xs font-bold flex items-center gap-2 transition cursor-pointer shadow-md shadow-profit-500/20">
+              <i data-lucide="filter" class="w-4 h-4"></i> 実売60選の「#セット売り」実例を一発表示する
+            </button>
+            <button onclick="jumpToArticle(2)" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold flex items-center gap-2 transition cursor-pointer">
+              <i data-lucide="book-open" class="w-4 h-4"></i> 限定記事②（セット売りの極意）を読む
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div id="starter-card-3" class="glass-card rounded-2xl p-5 sm:p-6 border-l-4 border-l-energy-500 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+            <div class="flex items-center gap-3">
+              <span class="px-3 py-1 rounded-xl bg-energy-500 text-white font-display font-black text-xs sm:text-sm">STEP 3</span>
+              <div>
+                <div class="text-[11px] text-energy-400 font-bold">所要時間：約10分｜低資金3,000円以下で狙える鉄板商品</div>
+                <h3 class="text-base sm:text-xl font-black text-white">初心者が最初に狙うべき「鉄板ジャンル＆厳選実売10選」</h3>
+              </div>
+            </div>
+            <button
+              onclick="toggleStarterStep(3)"
+              id="starter-btn-3"
+              class="self-start sm:self-auto px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-200 flex items-center gap-1.5 transition cursor-pointer"
+            >
+              <i data-lucide="circle" class="w-4 h-4"></i> <span>STEP 3 完了にする</span>
+            </button>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-300">
+            まずは仕入れリスクが極めて低い<strong class="text-white">「仕入れ値3,000円以下」の鉄板10商品</strong>（少年軟式バット・防具・硬式ラケット・未使用消耗品）の利益感覚を目に焼き付けてください（カードをタップすると収支内訳の詳細が開きます）。
+          </p>
+
+          <!-- 厳選10商品グリッド（JSで動的生成） -->
+          <div id="starter-top10-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <!-- JSで挿入 -->
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div id="starter-card-4" class="glass-card rounded-2xl p-5 sm:p-6 border-l-4 border-l-sky-400 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+            <div class="flex items-center gap-3">
+              <span class="px-3 py-1 rounded-xl bg-sky-400 text-navy-950 font-display font-black text-xs sm:text-sm">STEP 4</span>
+              <div>
+                <div class="text-[11px] text-sky-400 font-bold">現場実践｜店舗到着から出品までの最短フロー</div>
+                <h3 class="text-base sm:text-xl font-black text-white">迷わず動ける！店舗到着からの「初陣ルーティン」</h3>
+              </div>
+            </div>
+            <button
+              onclick="toggleStarterStep(4)"
+              id="starter-btn-4"
+              class="self-start sm:self-auto px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-200 flex items-center gap-1.5 transition cursor-pointer"
+            >
+              <i data-lucide="circle" class="w-4 h-4"></i> <span>STEP 4 完了にする</span>
+            </button>
+          </div>
+
+          <!-- 4段階店舗動線 -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+            <div class="bg-navy-950/90 border border-slate-800 rounded-xl p-3.5 space-y-1.5">
+              <div class="font-display font-black text-energy-500">1st. バット立て</div>
+              <p class="text-slate-300 leading-relaxed">ミズノ（ビヨンド系・Vコング）・ZETT・SSKを探し、ウレタン割れ＆凹みを確認。複数本まとめてセット化も検討。</p>
+            </div>
+            <div class="bg-navy-950/90 border border-slate-800 rounded-xl p-3.5 space-y-1.5">
+              <div class="font-display font-black text-energy-500">2nd. グローブ＆防具棚</div>
+              <p class="text-slate-300 leading-relaxed">捕球面の破れ・紐切れがなければOK。キャッチャー防具や審判防具、打者ガードのセット化を狙う。</p>
+            </div>
+            <div class="bg-navy-950/90 border border-slate-800 rounded-xl p-3.5 space-y-1.5">
+              <div class="font-display font-black text-profit-400">3rd. テニスラケット棚</div>
+              <p class="text-slate-300 leading-relaxed">バボラ・ウィルソン・プリンス等のフレーム折れ・ヒビだけ確認。ビニール巻きの劣化グリップ品は最優先確保！</p>
+            </div>
+            <div class="bg-navy-950/90 border border-slate-800 rounded-xl p-3.5 space-y-1.5">
+              <div class="font-display font-black text-sky-400">4th. その他＆ジャンク棚</div>
+              <p class="text-slate-300 leading-relaxed">店員が判別できないマイナー競技品・未使用消耗品・練習器具が一律550円〜2,200円で眠る最後の宝庫をチェック。</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2.5 pt-1">
+            <button onclick="switchTab('checklist')" class="px-4 py-2.5 rounded-xl bg-profit-600 hover:bg-profit-500 text-white text-xs font-bold flex items-center gap-2 transition cursor-pointer shadow-md shadow-profit-500/20">
+              <i data-lucide="check-square" class="w-4 h-4"></i> 店舗で使う「現場目利きチェックリスト」を開く
+            </button>
+            <button onclick="jumpToArticle(4)" class="px-4 py-2.5 rounded-xl bg-energy-500 hover:bg-energy-600 text-white text-xs font-bold flex items-center gap-2 transition cursor-pointer shadow-md shadow-energy-500/20">
+              <i data-lucide="copy" class="w-4 h-4"></i> 帰宅後に使う「出品テンプレート」を開く
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TAB 1: 実売60選データベース
+    ========================================== -->
+    <section id="panel-db" class="space-y-5">
+      <!-- コントロールパネル（検索・ジャンル・戦術・ソート） -->
+      <div class="glass-card rounded-2xl p-4 sm:p-5 space-y-4">
+        <div class="flex flex-col md:flex-row gap-3">
+          <!-- キーワード検索 -->
+          <div class="relative flex-1">
+            <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+            <input
+              type="text"
+              id="search-input"
+              oninput="renderDatabase()"
+              placeholder="商品名・メーカー・特徴で検索（例：ミズノ、バボラ、セット、未使用、へら...）"
+              class="w-full bg-navy-950 border border-slate-700 focus:border-energy-500 rounded-xl pl-10 pr-10 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none transition"
+            />
+            <button onclick="clearSearch()" id="clear-search-btn" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white p-1">
+              <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- ソート選択 -->
+          <div class="flex items-center gap-2">
+            <label for="sort-select" class="text-xs text-slate-400 whitespace-nowrap flex items-center gap-1">
+              <i data-lucide="arrow-up-down" class="w-3.5 h-3.5 text-energy-500"></i> 並び替え:
+            </label>
+            <select
+              id="sort-select"
+              onchange="renderDatabase()"
+              class="bg-navy-950 border border-slate-700 focus:border-energy-500 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none cursor-pointer w-full md:w-auto"
+            >
+              <option value="id-asc">登録順（No.1 〜 No.60）</option>
+              <option value="profit-desc">純利益が高い順</option>
+              <option value="margin-desc">利益率が高い順</option>
+              <option value="cost-asc">仕入れ値が安い順</option>
+              <option value="price-desc">販売価格が高い順</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- ジャンル別フィルター -->
+        <div class="space-y-2">
+          <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">競技・ジャンルで絞り込み</div>
+          <div id="genre-filters" class="flex flex-wrap gap-1.5 sm:gap-2">
+            <!-- JSで動的生成 -->
+          </div>
+        </div>
+
+        <!-- 戦術タグフィルター -->
+        <div class="space-y-2 pt-1 border-t border-slate-800/80">
+          <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">仕入れ戦術・特徴タグで絞り込み</div>
+          <div id="tactic-filters" class="flex flex-wrap gap-1.5 sm:gap-2">
+            <!-- JSで動的生成 -->
+          </div>
+        </div>
+
+        <!-- 動的集計バー -->
+        <div class="bg-navy-950/90 border border-slate-800 rounded-xl p-3 flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm">
+          <div class="flex items-center gap-2">
+            <span class="inline-block w-2 h-2 rounded-full bg-profit-400 animate-pulse"></span>
+            <span class="text-slate-300">該当件数:</span>
+            <strong id="filtered-count" class="font-display text-white text-base">60</strong>
+            <span class="text-slate-400">/ 60商品</span>
+          </div>
+          <div class="flex flex-wrap items-center gap-4 sm:gap-6">
+            <div>
+              <span class="text-slate-400 text-xs">該当合計利益: </span>
+              <strong id="filtered-total-profit" class="font-display text-profit-400 font-bold">¥551,554</strong>
+            </div>
+            <div>
+              <span class="text-slate-400 text-xs">該当平均利益: </span>
+              <strong id="filtered-avg-profit" class="font-display text-white font-bold">¥9,193</strong>
+            </div>
+            <div>
+              <span class="text-slate-400 text-xs">該当平均利益率: </span>
+              <strong id="filtered-avg-margin" class="font-display text-amber-400 font-bold">57.3%</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 商品リスト（グリッドカード表示：スマホ・PC両対応） -->
+      <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- JSで動的生成 -->
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TAB 2: 現場目利きチェックリスト
+    ========================================== -->
+    <section id="panel-checklist" class="hidden space-y-6">
+      <div class="glass-card rounded-2xl p-5 sm:p-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+          <div>
+            <span class="text-xs font-bold text-profit-400 uppercase tracking-wider">FIELD INSPECTION TOOL</span>
+            <h2 class="text-xl sm:text-2xl font-black text-white mt-0.5">店舗仕入れ・現場目利きチェックリスト</h2>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1">店舗で商品を手に取りながらタップして確認できます（チェック状態は自動保存）。</p>
+          </div>
+          <button onclick="resetChecklist()" class="self-start sm:self-auto px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300 flex items-center gap-1.5 transition cursor-pointer">
+            <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> チェックをリセット
+          </button>
+        </div>
+
+        <!-- 3大チェックカテゴリー -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 mt-6">
+          <!-- 1. 野球・ソフトボール目利き -->
+          <div class="bg-navy-950/80 border border-slate-800 rounded-2xl p-4 sm:p-5 space-y-4">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-xl bg-energy-500/20 text-energy-500 flex items-center justify-center font-bold">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-base">野球・ソフトボール仕入れ基準</h3>
+                <p class="text-[11px] text-slate-400">打感や捕球感の専門知識は一切不要！</p>
+              </div>
+            </div>
+            <div id="checklist-baseball" class="space-y-2.5"></div>
+          </div>
+
+          <!-- 2. テニスラケット5段階検品 -->
+          <div class="bg-navy-950/80 border border-slate-800 rounded-2xl p-4 sm:p-5 space-y-4">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-xl bg-profit-500/20 text-profit-400 flex items-center justify-center font-bold">
+                <i data-lucide="eye" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-base">テニスラケット5段階検品</h3>
+                <p class="text-[11px] text-slate-400">ボロボロに見える「お宝サイン」を見抜く</p>
+              </div>
+            </div>
+            <div id="checklist-tennis" class="space-y-2.5"></div>
+          </div>
+
+          <!-- 3. セット売り・盲点棚チェック -->
+          <div class="bg-navy-950/80 border border-slate-800 rounded-2xl p-4 sm:p-5 space-y-4">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold">
+                <i data-lucide="layers" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-base">利益爆増・セット売り＆盲点棚</h3>
+                <p class="text-[11px] text-slate-400">薄利商品を独占高利益ページへ変える</p>
+              </div>
+            </div>
+            <div id="checklist-tactics" class="space-y-2.5"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- テニスラケット9つの部位名称リファレンス -->
+      <div class="glass-card rounded-2xl p-5 sm:p-6">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="info" class="w-5 h-5 text-energy-500"></i>
+          <h3 class="text-lg font-bold text-white">【保存版】テニスラケット 9つの部位名称＆チェックポイント図解</h3>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs sm:text-sm">
+          <div class="bg-navy-950/70 border border-slate-800 rounded-xl p-3.5">
+            <div class="font-bold text-energy-500 mb-1">1. フレーム（Frame）</div>
+            <p class="text-slate-300 leading-relaxed">ラケット全体を構成する枠組み。<strong class="text-rose-400">内側・外側のヒビや折れ、修理跡がある場合は即スルー（NG）</strong>。</p>
+          </div>
+          <div class="bg-navy-950/70 border border-slate-800 rounded-xl p-3.5">
+            <div class="font-bold text-energy-500 mb-1">2. ヘッド（Head）</div>
+            <p class="text-slate-300 leading-relaxed">ストリングが張られている打球面エリア。折れて変形していてもガットで形を保っている場合があるので要注意。</p>
+          </div>
+          <div class="bg-navy-950/70 border border-slate-800 rounded-xl p-3.5">
+            <div class="font-bold text-profit-400 mb-1">3. ストリング / ガット（String）</div>
+            <p class="text-slate-300 leading-relaxed">網状の打球面。<strong class="text-profit-400">切れていたり張っていなくても相場影響はほぼなし！</strong>ハサミで十字に切って外して出品OK。</p>
+          </div>
+          <div class="bg-navy-950/70 border border-slate-800 rounded-xl p-3.5">
+            <div class="font-bold text-slate-200 mb-1">4. シャフト（Shaft）</div>
+            <p class="text-slate-300 leading-relaxed">ヘッドとグリップをつなぐ棒状の部分。モデル名やスペック（重さ・フェイス面積等）が印字されていることが多い重要箇所。</p>
+          </div>
+          <div class="bg-navy-950/70 border border-slate-800 rounded-xl p-3.5">
+            <div class="font-bold text-slate-200 mb-1">5. スロート（Throat）</div>
+            <p class="text-slate-300 leading-relaxed">ヘッドとシャフトの間の三角形の部分。ここにグリップサイズ（G2 / G3等）のシールが貼られていることも多い。</p>
+          </div>
+          <div class="bg-navy-950/70 border border-slate-800 rounded-xl p-3.5">
+            <div class="font-bold text-profit-400 mb-1">6. グリップ（Grip）</div>
+            <p class="text-slate-300 leading-relaxed">握る部分。<strong class="text-profit-400">劣化で店舗がビニールラップを巻いている品はお宝！</strong>100円以下の互換グリップテープをおまけ添付で高値成約。</p>
+          </div>
+          <div class="bg-navy-950/70 border border-slate-800 rounded-xl p-3.5">
+            <div class="font-bold text-amber-400 mb-1">7. グロメット（Grommet）</div>
+            <p class="text-slate-300 leading-relaxed">フレームの穴を保護する樹脂パーツ。劣化・欠けがあってもプレー影響は小さく、相場への影響も軽微。</p>
+          </div>
+          <div class="bg-navy-950/70 border border-slate-800 rounded-xl p-3.5">
+            <div class="font-bold text-amber-400 mb-1">8. バンパーガード（Bumper Guard）</div>
+            <p class="text-slate-300 leading-relaxed">ヘッド上部の保護パーツ。破損があると相場に影響するが、レア・廃盤モデルなら破損ありの過去履歴と照合して利益確保可能。</p>
+          </div>
+          <div class="bg-navy-950/70 border border-slate-800 rounded-xl p-3.5">
+            <div class="font-bold text-sky-400 mb-1">9. グリップキャップ（Grip Cap）</div>
+            <p class="text-slate-300 leading-relaxed">グリップエンドの蓋パーツ。メーカーロゴと共に「#2」「#3」等のグリップサイズが記載されているため必ず撮影・明記する。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TAB 3: 限定ノウハウ記事ポータル（全6本）
+    ========================================== -->
+    <section id="panel-articles" class="hidden space-y-5">
+      <div class="glass-card rounded-2xl p-5 sm:p-6">
+        <div class="border-b border-slate-800 pb-4 mb-5">
+          <span class="text-xs font-bold text-sky-400 uppercase tracking-wider">MEMBER EXCLUSIVE ARTICLES</span>
+          <h2 class="text-xl sm:text-2xl font-black text-white mt-0.5">タカヤ式・会員限定ノウハウ記事アーカイブ（全6本）</h2>
+          <p class="text-xs sm:text-sm text-slate-400 mt-1">AI・型番リサーチ勢が参入できない「現場の目利きロジック」と「即コピペ可能な出品テンプレート」を収録。</p>
+        </div>
+
+        <div id="articles-list" class="space-y-4">
+          <!-- JSで動的生成 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TAB 4: 限定解説動画アーカイブ（全8本）
+    ========================================== -->
+    <section id="panel-videos" class="hidden space-y-5">
+      <div class="glass-card rounded-2xl p-5 sm:p-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4 mb-5">
+          <div>
+            <span class="text-xs font-bold text-energy-500 uppercase tracking-wider">VIDEO LECTURE ARCHIVE</span>
+            <h2 class="text-xl sm:text-2xl font-black text-white mt-0.5">タカヤ氏・実地仕入れ＆目利き解説動画（全8本）</h2>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1">店舗でのリサーチ風景と利益商品の見つけ方を動画で完全マスター。視聴完了チェックで進捗管理できます。</p>
+          </div>
+          <!-- 学習進捗バー -->
+          <div class="bg-navy-950 border border-slate-800 rounded-xl p-3 min-w-[220px]">
+            <div class="flex items-center justify-between text-xs mb-1.5">
+              <span class="text-slate-400 font-bold">学習コンプリート率</span>
+              <span id="video-progress-text" class="font-display font-extrabold text-profit-400">0 / 8本 (0%)</span>
+            </div>
+            <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+              <div id="video-progress-bar" class="h-full bg-gradient-to-r from-energy-500 to-profit-500 transition-all duration-300" style="width: 0%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="videos-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- JSで動的生成 -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 商品詳細モーダル -->
+  <div id="product-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onclick="closeModalOnBackdrop(event)">
+    <div class="bg-navy-900 border border-slate-700 rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl transform transition-all" onclick="event.stopPropagation()">
+      <!-- モーダルヘッダー -->
+      <div class="bg-gradient-to-r from-navy-800 to-navy-900 px-5 py-4 border-b border-slate-800 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span id="modal-no" class="px-2.5 py-0.5 rounded-lg bg-energy-500 text-white font-display font-extrabold text-xs">No.1</span>
+          <span id="modal-genre" class="px-2.5 py-0.5 rounded-lg bg-slate-800 text-slate-300 text-xs font-bold">野球・ソフトボール</span>
+        </div>
+        <button onclick="closeProductModal()" class="text-slate-400 hover:text-white p-1.5 rounded-lg hover:bg-slate-800 transition cursor-pointer">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- モーダル本文 -->
+      <div class="p-5 sm:p-6 space-y-5">
+        <div>
+          <div id="modal-tags" class="flex flex-wrap gap-1.5 mb-2"></div>
+          <h3 id="modal-title" class="text-lg sm:text-xl font-black text-white leading-snug"></h3>
+        </div>
+
+        <!-- 収支内訳ボックス -->
+        <div class="bg-navy-950 border border-slate-800 rounded-2xl p-4 space-y-3">
+          <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
+            <div>
+              <div class="text-xs text-slate-400">純利益（手残り）</div>
+              <div id="modal-profit" class="font-display text-2xl sm:text-3xl font-black text-profit-400"></div>
+            </div>
+            <div class="text-right">
+              <div class="text-xs text-slate-400">利益率</div>
+              <div id="modal-margin" class="font-display text-2xl sm:text-3xl font-black text-amber-400"></div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 text-xs sm:text-sm pt-1">
+            <div class="flex justify-between bg-navy-900/80 px-3 py-2 rounded-lg">
+              <span class="text-slate-400">販売価格</span>
+              <span id="modal-price" class="font-display font-bold text-white"></span>
+            </div>
+            <div class="flex justify-between bg-navy-900/80 px-3 py-2 rounded-lg">
+              <span class="text-slate-400">仕入れ値</span>
+              <span id="modal-cost" class="font-display font-bold text-rose-400"></span>
+            </div>
+            <div class="flex justify-between bg-navy-900/80 px-3 py-2 rounded-lg">
+              <span class="text-slate-400">販売手数料(10%)</span>
+              <span id="modal-fee" class="font-display text-slate-300"></span>
+            </div>
+            <div class="flex justify-between bg-navy-900/80 px-3 py-2 rounded-lg">
+              <span class="text-slate-400">配送料</span>
+              <span id="modal-shipping" class="font-display text-slate-300"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- タカヤの現場目利きメモ -->
+        <div class="bg-energy-500/10 border border-energy-500/30 rounded-xl p-4">
+          <div class="text-xs font-bold text-energy-500 flex items-center gap-1.5 mb-1.5">
+            <i data-lucide="lightbulb" class="w-4 h-4"></i> タカヤの現場目利き・仕入れポイント
+          </div>
+          <p id="modal-note" class="text-xs sm:text-sm text-slate-200 leading-relaxed"></p>
+        </div>
+
+        <!-- タイトルコピーボタン -->
+        <div class="flex gap-2">
+          <button onclick="copyModalTitle()" class="flex-1 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs sm:text-sm py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition cursor-pointer">
+            <i data-lucide="copy" class="w-4 h-4 text-energy-500"></i>
+            <span id="copy-title-btn-text">リサーチ・出品用タイトルをコピー</span>
+          </button>
+          <button onclick="closeProductModal()" class="bg-energy-500 hover:bg-energy-600 text-white font-bold text-xs sm:text-sm py-3 px-5 rounded-xl transition cursor-pointer">
+            閉じる
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- トースト通知 -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 hidden items-center gap-2 bg-profit-600 text-white text-xs sm:text-sm font-bold px-4 py-3 rounded-xl shadow-xl">
+    <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+    <span id="toast-message">クリップボードにコピーしました！</span>
+  </div>
+
+  <!-- フッター -->
+  <footer class="border-t border-slate-800/80 bg-navy-950 py-6 px-4 text-center text-xs text-slate-500 mt-10 space-y-3">
+    <div>
+      <p class="font-bold text-slate-400">タカヤ式スポーツ中古せどり実践ポータル｜購入者限定特典（1ヶ月限定公開）</p>
+      <p class="mt-1">※本ポータル内の実売データ60選・限定記事・解説動画の無断転載・再配布を禁じます。</p>
+    </div>
+    <div class="pt-1">
+      <button
+        onclick="downloadStandaloneHtml()"
+        class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-4 py-2 rounded-xl text-xs font-bold transition cursor-pointer"
+      >
+        <i data-lucide="download" class="w-4 h-4 text-profit-400"></i>
+        <span>配布用 HTMLファイル（index.html）を直接ダウンロード</span>
+      </button>
+    </div>
+  </footer>
+
+  <!-- アプリケーションデータ＆ロジック -->
+  <script>
+    // ==========================================
+    // 1. 実売データ全60商品マスターデータ
+    // ==========================================
+    const PRODUCTS_DATA = [
+      { id: 1, name: "ZETT ゼット LUSWIN-GX 軟式用 野球 キャッチャーミット 右投げ", price: 6680, cost: 1320, profit: 3842, margin: 57, fee: 668, shipping: 850, genre: "野球・ソフトボール", tags: ["ジャンク棚・店舗盲点"], note: "多少の使用感や砂汚れがあっても、革の破れ・紐切れがなければ通常使用可能として十分高値で売れる典型例。仕入れ1,320円から堅実に3,800円超の利益。" },
+      { id: 2, name: "ベルガード プロフェッショナルモデル キャッチャーミット 軟式少年 左投げ", price: 10500, cost: 3300, profit: 5300, margin: 50, fee: 1050, shipping: 850, genre: "野球・ソフトボール", tags: ["廃盤・希少品"], note: "知る人ぞ知る国産メーカー『ベルガード（日本製）』×『左投げ用キャッチャーミット』という希少性の掛け合わせ。型番検索に頼るライバルはまず拾えないお宝。" },
+      { id: 3, name: "SSK エスエスケイ メタルハンター2 一般 軟式用 野球 バット", price: 9000, cost: 2200, profit: 4750, margin: 52, fee: 900, shipping: 1150, genre: "野球・ソフトボール", tags: ["廃盤・希少品"], note: "飛距離性能で根強いファンが多い名作『メタルハンター2』。ウレタン部分の亀裂・割れさえなければ中古市場で即売れする鉄板バット。" },
+      { id: 4, name: "ZETT ゼット バトルツイン ST 軟式少年用 野球 バット", price: 8500, cost: 3300, profit: 3300, margin: 38, fee: 850, shipping: 1050, genre: "野球・ソフトボール", tags: [], note: "少年軟式用の人気モデル『バトルツインST』。打撃部のウレタン状態とグリップエンドの損傷有無を確認すれば、安定して利益3,000円以上を確保可能。" },
+      { id: 5, name: "ミズノ ゼット レッグガード エルボーガード 2点セット 野球 防具", price: 5980, cost: 880, profit: 3652, margin: 61, fee: 598, shipping: 850, genre: "野球・ソフトボール", tags: ["セット売り・まとめ売り"], note: "単体だと送料負けしやすい打者用防具（エルボー＆レッグガード）を2点セット化。送料1回分に圧縮することで利益率61%を実現した王道セット戦術。" },
+      { id: 6, name: "MIZUNO ミズノ グローバルエリート ランニング シューズ 未使用品 野球", price: 9000, cost: 550, profit: 6800, margin: 75, fee: 900, shipping: 750, genre: "野球・ソフトボール", tags: ["未使用・付属品完備", "ジャンク棚・店舗盲点"], note: "店舗のシューズ棚でわずか550円で放置されていた未使用の『グローバルエリート』トレシュー。ブランド上位ライン×未使用タグ付きは見つけた瞬間に仕入れ確定。" },
+      { id: 7, name: "adidas アディダス トレーニング ビブス 10枚 サッカー フットサル", price: 9000, cost: 2200, profit: 5050, margin: 56, fee: 900, shipping: 850, genre: "その他お宝", tags: ["セット売り・まとめ売り", "ジャンク棚・店舗盲点"], note: "店舗では袋に丸められて2,200円で置かれていたビブス10枚セット。番号入り・収納袋付きの『チーム用10枚揃い』はフットサル・部活需要が非常に高い。" },
+      { id: 8, name: "ダンロップ Diaclusder 10.0 DB 硬式用 テニス ラケット", price: 6680, cost: 1320, profit: 3842, margin: 57, fee: 668, shipping: 850, genre: "テニス・卓球", tags: [], note: "シニア層やダブルス愛好家に根強い人気を誇る厚ラケ・デカラケ系（ダイアクラスター10.0）。フレームのヒビさえなければ古いモデルでも高値で売れる好例。" },
+      { id: 9, name: "PROBEAM プロビーム 折り畳み式 ボールバスケット キャスター テニス", price: 7300, cost: 3300, profit: 2420, margin: 33, fee: 730, shipping: 850, genre: "テニス・卓球", tags: ["ジャンク棚・店舗盲点"], note: "ラケット棚の横に置かれがちな大型練習用品（ボールカゴ）。折り畳み式でコンパクトに梱包できるため、メルカリ便送料850円で発送できしっかり利益が残る。" },
+      { id: 10, name: "MIZUNO 空手用 ニューメンホー Ⅶ 7 セブン SSサイズ ヘッドギア", price: 17500, cost: 8800, profit: 5800, margin: 33, fee: 1750, shipping: 1150, genre: "格闘技・フィットネス", tags: ["未使用・付属品完備"], note: "全空連検定品の『ニューメンホー7』は定価が高額なため中古でも鉄板の高単価商品。シールドの視界不良・大きな割れがなければ即売れする。" },
+      { id: 11, name: "KEPSPEED製 スーパーカブ用 タックロール カスタムシート バイク", price: 7150, cost: 550, profit: 4735, margin: 66, fee: 715, shipping: 1150, genre: "その他お宝", tags: ["ジャンク棚・店舗盲点"], note: "オフハウスの『その他』コーナーで550円値付けされていたカスタムシート。表皮の破れがなく裏面のロゴ（KEPSPEED）を確認できれば一撃4,700円超え。" },
+      { id: 12, name: "ゴルフ プライド クラウンゴールド グリップ 未使用 10本セット L58", price: 12000, cost: 3300, profit: 7050, margin: 58, fee: 1200, shipping: 450, genre: "その他お宝", tags: ["セット売り・まとめ売り", "未使用・付属品完備"], note: "1本330円でバラ売りされていた未使用ゴルフグリップを10本まとめて仕入れ。アイアン一式交換需要に合わせて10本セット販売することで送料450円・利益7,050円を達成。" },
+      { id: 13, name: "DAIWA ダイワ CORONET MINI コロネット ミニ 釣り リール", price: 3880, cost: 330, profit: 2712, margin: 69, fee: 388, shipping: 450, genre: "釣り・アウトドア", tags: ["廃盤・希少品", "ジャンク棚・店舗盲点"], note: "アウトドアコーナーの隅で330円だったオールドダイワの小型リール。回転動作がスムーズならコレクター・穴釣りファンに即売れする。" },
+      { id: 14, name: "スーパー GINKAKU 銀閣 ヘラ釣り ヘラ台 セーフティステップ へら", price: 20000, cost: 8800, profit: 7900, margin: 39, fee: 2000, shipping: 1300, genre: "釣り・アウトドア", tags: ["未使用・付属品完備"], note: "ヘラブナ釣り用品は単価が非常に高く、ライバルがほぼ見ていない超穴場ジャンル。オプションのセーフティステップ付きを見逃さず2万円で成約。" },
+      { id: 15, name: "がまかつ がまへら 中硬 MARK Ⅱ 2 マーク 十尺 へら竿 ヘラ ロッド", price: 65500, cost: 5500, profit: 52150, margin: 79, fee: 6550, shipping: 1300, genre: "釣り・アウトドア", tags: ["廃盤・希少品", "ジャンク棚・店舗盲点"], note: "【衝撃の一撃利益5.2万円】リサイクルショップで5,500円だった『がまへら MARKⅡ 十尺』。口割れや穂先の折れがないことを確認し、65,500円で販売。" },
+      { id: 16, name: "MIZUNO ミズノ ビヨンドマックス レガシー 軟式少年 野球 バット", price: 27700, cost: 7700, profit: 15930, margin: 57, fee: 2770, shipping: 1300, genre: "野球・ソフトボール", tags: ["未使用・付属品完備"], note: "少年野球界の王様『ビヨンドマックス レガシー』の未使用・バットケース付き。店舗側が一般用と少年用を混同して安く値付けするケースも多く要チェック。" },
+      { id: 17, name: "ミズノ ビクトリーステージ ビヨンドマックス EV 軟式 少年用 野球 バット", price: 8180, cost: 1320, profit: 4992, margin: 61, fee: 818, shipping: 1050, genre: "野球・ソフトボール", tags: [], note: "ビヨンドマックスEVは軽量で低学年〜中学年に人気が高く、中古でも回転が極めて早い。1,320円仕入れならノータイムでカゴに入れるべき定番モデル。" },
+      { id: 18, name: "ミズノ キングヒッター 330 350 軟式少年 野球 バット 2本セット", price: 9800, cost: 1760, profit: 6010, margin: 61, fee: 980, shipping: 1050, genre: "野球・ソフトボール", tags: ["セット売り・まとめ売り"], note: "1本880円の少年用バットをサイズ違い（330/350）で2本セット販売。兄弟用やチーム用としての需要を捉え、1本あたり利益3,000円超に引き上げた好例。" },
+      { id: 19, name: "パワースラッガー ワンハンドバット ナノバット インサイダーバット 野球 5点セット", price: 17000, cost: 3630, profit: 10370, margin: 61, fee: 1700, shipping: 1300, genre: "野球・ソフトボール", tags: ["セット売り・まとめ売り"], note: "店舗のバット立てに1本880円前後でバラバラに刺さっていた『素振り・トレーニング用バット』5本をかき集めてセット化！一撃利益1万円超えを達成。" },
+      { id: 20, name: "MIZUNOPRO ミズノプロ ハード バットケース 2本入れ", price: 11200, cost: 2728, profit: 5802, margin: 51, fee: 1120, shipping: 1550, genre: "野球・ソフトボール", tags: ["廃盤・希少品"], note: "単なるソフトケースではなく『ミズノプロ×ハードタイプ×2本入れ』の希少モデル。遠征や高校野球・硬式クラブ層からの需要が高く1万円超えで売却。" },
+      { id: 21, name: "SSK エスエスケイ 軟式用 マスク インサイドプロテクター 2点セット", price: 11400, cost: 2200, profit: 7110, margin: 62, fee: 1140, shipping: 950, genre: "野球・ソフトボール", tags: ["セット売り・まとめ売り"], note: "審判用マスク（1,320円）とインサイドプロテクター（880円）を店舗内で組み合わせて『審判2点セット』として出品。ニッチ需要×セット化で利益7,110円。" },
+      { id: 22, name: "ZETT ゼット 軟式 少年用 キャッチャー 防具 野球 4点セット", price: 19300, cost: 7700, profit: 8520, margin: 44, fee: 1930, shipping: 1150, genre: "野球・ソフトボール", tags: ["セット売り・まとめ売り"], note: "マスク・ヘルメット・プロテクター・レガースの4点フルセット。フルセット揃っていると購入者が買い足す手間がないため、約2万円でも即売れする。" },
+      { id: 23, name: "イーストン & オールスター キャッチャー 防具 プロテクター レガース 2点セット", price: 25000, cost: 4400, profit: 16800, margin: 67, fee: 2500, shipping: 1300, genre: "野球・ソフトボール", tags: ["セット売り・まとめ売り", "廃盤・希少品"], note: "海外メジャーブランド（EASTON & ALL-STAR）の本格キャッチャー防具セット。国内流通が少なく、草野球・硬式プレイヤーから25,000円で即購入された高利益案件。" },
+      { id: 24, name: "バボラ ピュアドライブ GT テクノロジー 硬式用 テニス ラケット", price: 7080, cost: 550, profit: 4622, margin: 65, fee: 708, shipping: 1200, genre: "テニス・卓球", tags: ["ジャンク棚・店舗盲点"], note: "テニスラケットの王道『バボラ ピュアドライブ』。店舗で550円という破格値だったが、フレームのヒビ・折れがないことを確認して仕入れ、利益率65%を実現。" },
+      { id: 25, name: "テニス練習用品 ピコチーノ 硬式 山川製作所 トレーニング 室内 屋内 屋外", price: 17000, cost: 3300, profit: 10700, margin: 62, fee: 1700, shipping: 1300, genre: "テニス・卓球", tags: ["ジャンク棚・店舗盲点"], note: "1人で自宅練習ができる超人気器具『ピコチーノ』。砂袋・ボール部分のバネが正常なら、中古でも1.7万円前後で飛ぶように売れる鉄板練習器具。" },
+      { id: 26, name: "MIZUNO ミズノ オールスター MC グラウンドゴルフ 右打ち 84cm", price: 14400, cost: 2200, profit: 9460, margin: 65, fee: 1440, shipping: 1300, genre: "その他お宝", tags: ["ジャンク棚・店舗盲点"], note: "ゴルフコーナーの端に紛れ込みやすい『グラウンドゴルフ（パークゴルフ）クラブ』。シニア層の購買力が非常に高く、ミズノ製84cmの標準サイズは高値安定。" },
+      { id: 27, name: "マーシャルワールド ボディメーカー ヘッドガード 2点セット 格闘技", price: 7880, cost: 2210, profit: 3932, margin: 49, fee: 788, shipping: 950, genre: "格闘技・フィットネス", tags: ["セット売り・まとめ売り"], note: "格闘技用ヘッドガード2個（1,320円＋880円）をセット化。道場・ジムの備品需要やスパーリング用としてのまとめ需要を捉え、利益約4,000円を確保。" },
+      { id: 28, name: "GCH クライミング ホールド 49パーツ ボルダリング ウォール 壁 ブロック", price: 11500, cost: 2178, profit: 7122, margin: 61, fee: 1150, shipping: 1050, genre: "釣り・アウトドア", tags: ["ジャンク棚・店舗盲点", "セット売り・まとめ売り"], note: "店舗の『ジャンク全般』コーナーに袋詰めで置かれていたボルダリングホールド49個＋ボルト一式。自宅クライミングウォールDIY層に11,500円で即売れ。" },
+      { id: 29, name: "都村製作所 ツムラ こども鉄棒 室内 屋内 逆上がり 子ども", price: 16000, cost: 990, profit: 10910, margin: 68, fee: 1600, shipping: 2500, genre: "格闘技・フィットネス", tags: ["ジャンク棚・店舗盲点"], note: "国産高品質な『ツムラ こども鉄棒』がキッズ家具コーナーで990円！大型商品でもメルカリ便なら送料2,500円で全国発送できるため、一撃利益10,910円を達成。" },
+      { id: 30, name: "BUYDEEM バディーム 薬膳ティーポット 1.0L マルチポット", price: 9200, cost: 1738, profit: 5492, margin: 59, fee: 920, shipping: 1050, genre: "その他お宝", tags: ["ジャンク棚・店舗盲点"], note: "『ジャンク全般』棚にあった人気キッチン家電。店舗のチェックコーナーで沸騰・通電動作を確認し、ガラス割れやパーツ欠品がないため完動品として高値売却。" },
+      { id: 31, name: "ミズノ ビヨンドマックス レガシー 一般 軟式用 野球 バット ソフトケース付き", price: 24700, cost: 4400, profit: 16780, margin: 67, fee: 2470, shipping: 1050, genre: "野球・ソフトボール", tags: ["未使用・付属品完備"], note: "一般軟式用レガシーが4,400円という超お宝プライス！ウレタン部の亀裂なし・専用ソフトケース付きをしっかりアピールし、純利益16,780円。" },
+      { id: 32, name: "ミズノ ビクトリーステージ ビヨンドマックス EV 軟式 少年用 野球 バット", price: 7980, cost: 1320, profit: 4812, margin: 60, fee: 798, shipping: 1050, genre: "野球・ソフトボール", tags: [], note: "No.17と同じくビヨンドマックスEVの1,320円仕入れ。再現性が極めて高く、店舗のバットコーナーを見れば高確率で利益が取れる鉄板商品。" },
+      { id: 33, name: "ZETT ゼット バトルツイン ST 軟式少年用 野球 バット 未使用品", price: 17700, cost: 6600, profit: 8280, margin: 46, fee: 1770, shipping: 1050, genre: "野球・ソフトボール", tags: ["未使用・付属品完備"], note: "シュリンク（フィルム）付きの未使用バトルツインST。定価2万円クラスのバットが6,600円で仕入れられれば、確実に8,000円以上の利益が抜ける。" },
+      { id: 34, name: "ミズノプロ 硬式用 木製 バット NPB C-002 D52 野球", price: 7800, cost: 2200, profit: 3670, margin: 47, fee: 780, shipping: 1150, genre: "野球・ソフトボール", tags: ["廃盤・希少品"], note: "『NPBマーク』入りのミズノプロ硬式木製バット。折れ・ヒビ・松ヤニの過度な固着がなければ、社会人・大学野球プレイヤーやコレクターに高値で売れる。" },
+      { id: 35, name: "ルイスビルスラッガー カタリスト2 Ti 軟式少年用 野球 バット", price: 7000, cost: 1100, profit: 4050, margin: 57, fee: 700, shipping: 1150, genre: "野球・ソフトボール", tags: ["ジャンク棚・店舗盲点"], note: "レガシー・ギガキングと並ぶ少年軟式の人気バット『カタリスト2 Ti』。店舗の50%OFFシール（2,200円→1,100円）を逃さず利益4,050円。" },
+      { id: 36, name: "アシックス 少年軟式用 プロフェッショナル スタイル 田中広輔モデル グローブ", price: 5180, cost: 880, profit: 2932, margin: 56, fee: 518, shipping: 850, genre: "野球・ソフトボール", tags: [], note: "880円の少年用グローブでも、捕球面の刻印から『田中広輔選手モデル』と特定してタイトルに入れることで検索流入が激増し、5,180円で成約。" },
+      { id: 37, name: "ナイキ シグネチャーモデル ダルビッシュ有 モデル 一般 軟式用 野球 グローブ", price: 18700, cost: 5500, profit: 10480, margin: 56, fee: 1870, shipping: 850, genre: "野球・ソフトボール", tags: ["廃盤・希少品"], note: "ナイキは日本の一般向け野球グラブ市場から撤退しているため、ダルビッシュ有モデルは廃盤プレミアム価格で取引される超人気アイテム。" },
+      { id: 38, name: "ハイゴールド ダイアモンド 審判用 防具 レガース マスク 小物付き 野球", price: 17000, cost: 3300, profit: 10850, margin: 63, fee: 1700, shipping: 1150, genre: "野球・ソフトボール", tags: ["セット売り・まとめ売り"], note: "審判用レガース・マスク・ハケやインジケーター等の小物まで一式揃った状態。バラバラにせず一式セットで出品することで17,000円の高値成約。" },
+      { id: 39, name: "Wilson Nコード n5 FORCE 2本セット 硬式用 テニス ラケット", price: 11200, cost: 3960, profit: 4920, margin: 43, fee: 1120, shipping: 1200, genre: "テニス・卓球", tags: ["セット売り・まとめ売り"], note: "試合に出るプレイヤーはガット切れに備えて『同じラケットを2本揃える』習性がある。同一モデル2本セットにすることで単体売りより高単価・即売れを実現。" },
+      { id: 40, name: "TOPSPIN PRO トップスピン プロ テニス 練習用品 未使用ボール付き", price: 18300, cost: 6060, profit: 8570, margin: 46, fee: 1830, shipping: 1300, genre: "テニス・卓球", tags: ["未使用・付属品完備"], note: "本体を3,300円で仕入れ、消耗していたボールパーツ（2,760円）を新品で買い足して『未使用ボール付き完品』として商品価値を最大化！利益8,570円。" },
+      { id: 41, name: "SIXPAD シックスパッド アブズベルト 高電導ジェルシート 4点 未使用品", price: 6500, cost: 440, profit: 5200, margin: 80, fee: 650, shipping: 210, genre: "格闘技・フィットネス", tags: ["セット売り・まとめ売り", "未使用・付属品完備"], note: "【利益率80%】1箱110円で売られていた純正ジェルシートを4箱まとめて440円仕入れ。ネコポス送料210円で発送でき、純利益5,200円の超効率案件。" },
+      { id: 42, name: "プリンス グラファイトA1 オーバーサイズ ロングボディ 硬式用 ラケット", price: 7980, cost: 880, profit: 5102, margin: 63, fee: 798, shipping: 1200, genre: "テニス・卓球", tags: ["ジャンク棚・店舗盲点", "廃盤・希少品"], note: "グリップテープ劣化のため店舗でビニールラップが巻かれて880円で放置されていた名作ラケット。購入者自身が巻き替えるため相場影響はなく利益5,102円。" },
+      { id: 43, name: "ryka ライカTENACITY トレーニング フィットネス シューズ 25.5cm", price: 7080, cost: 880, profit: 4742, margin: 66, fee: 708, shipping: 750, genre: "格闘技・フィットネス", tags: [], note: "ズンバ・エアロビクス・スタジオフィットネス愛好家に絶大な人気を誇る『ryka（ライカ）』。一般せどらーが知らない専門ブランドだからこそ880円で拾える。" },
+      { id: 44, name: "BURTON バートン JUNKYARD ジャンクヤード スノースケート", price: 20000, cost: 3300, profit: 13150, margin: 65, fee: 2000, shipping: 1550, genre: "釣り・アウトドア", tags: ["廃盤・希少品"], note: "バートンの名作スノースケート『JUNKYARD』。すでに廃盤となっており、冬シーズン前後には2万円超えで取引されるコレクターズアイテム。" },
+      { id: 45, name: "フラダンス プイリ 長さ 約50cm 楽器 道具 踊り", price: 5780, cost: 550, profit: 3802, margin: 65, fee: 578, shipping: 850, genre: "その他お宝", tags: ["ジャンク棚・店舗盲点"], note: "『スポーツその他』コーナーに竹の棒のように置かれていたフラダンス用楽器『プイリ』。割れやひび割れがなければ習い事需要で5,780円で売れる。" },
+      { id: 46, name: "BabolaT バボラ ピュア ドライブ 硬式用 テニス ラケット #3", price: 6780, cost: 1760, profit: 3142, margin: 46, fee: 678, shipping: 1200, genre: "テニス・卓球", tags: [], note: "グリップキャップの『#3（G3）』をしっかりタイトルと写真に明記。ピュアドライブは世代を問わず安定して6,000円〜8,000円台で回転する鉄板商材。" },
+      { id: 47, name: "Wilson ウィルソン トライアド FIVE 5 硬式用 テニス ラケット", price: 7200, cost: 2178, profit: 3102, margin: 43, fee: 720, shipping: 1200, genre: "テニス・卓球", tags: [], note: "衝撃吸収性に優れた『TRIAD（トライアド）』シリーズは肘に優しくシニア層に大人気。フレームの欠け・ヒビを確認し、7,200円で堅実に利益確保。" },
+      { id: 48, name: "Butterfly バタフライ 孔令輝 スペシャル AN 卓球 ラケット", price: 15400, cost: 7700, profit: 5310, margin: 34, fee: 1540, shipping: 850, genre: "テニス・卓球", tags: ["廃盤・希少品"], note: "グリップエンドのエンブレムが旧ロゴ『黒蝶』の廃盤モデル！卓球ラケットの旧ロゴ（黒蝶・銀蝶）は世界中のコレクターが探しているため1.5万円超えで即売れ。" },
+      { id: 49, name: "Nittaku ニッタク ランロックス 5 卓球 ラケット ST", price: 9400, cost: 3300, profit: 4610, margin: 49, fee: 940, shipping: 550, genre: "テニス・卓球", tags: ["廃盤・希少品"], note: "スウェーデン製のヴィンテージ卓球ラケット『Runlox-5』。ブレードの割れや極端な削れがない美品だったため、コンパクト配送（送料550円）で利益4,610円。" },
+      { id: 50, name: "ツインズ スペシャル パンチング グローブ 未使用 Lサイズ タグ付", price: 5380, cost: 880, profit: 3112, margin: 57, fee: 538, shipping: 850, genre: "格闘技・フィットネス", tags: ["未使用・付属品完備"], note: "ムエタイ・キックボクシングの老舗最高峰ブランド『TWINS SPECIAL』。未使用タグ付きが880円なら即仕入れ案件。" },
+      { id: 51, name: "NIKE ナイキ SQ SUMO ドライバー 3U 4U ユーティリティ 3本", price: 12200, cost: 4840, profit: 4340, margin: 35, fee: 1220, shipping: 1800, genre: "その他お宝", tags: ["セット売り・まとめ売り", "廃盤・希少品"], note: "ナイキもゴルフクラブ事業から撤退済みのため、同シリーズ（SQ SUMO）のドライバー＋ユーティリティ2本を揃えて3本セット化することで12,200円販売を実現。" },
+      { id: 52, name: "LAVA ヨガマット ヨガラグ 収納ケース 未使用品 3点セット", price: 12500, cost: 1980, profit: 8120, margin: 65, fee: 1250, shipping: 1150, genre: "格闘技・フィットネス", tags: ["セット売り・まとめ売り", "未使用・付属品完備"], note: "ホットヨガLAVAの未使用マット（1,100円）とラグ（880円）をセット化。さらにラグの裏面に収納ケースが同梱されているのを見抜いた現場検品の勝利！" },
+      { id: 53, name: "ゼット ミズノ 軟式 野球 片耳 左打者 ヘルメット 2点セット", price: 7600, cost: 1650, profit: 4240, margin: 55, fee: 760, shipping: 950, genre: "野球・ソフトボール", tags: ["セット売り・まとめ売り"], note: "草野球チームで不足しがちな『左打者用（右耳ガード）片耳ヘルメット』を2個まとめてセット販売（330円＋1,320円）。左打者用と明記するのが高値販売のコツ。" },
+      { id: 54, name: "ミズノ ビューリーグ GUSTYGAIN 限定 硬式用 野球 グローブ", price: 7400, cost: 2200, profit: 3710, margin: 50, fee: 740, shipping: 750, genre: "野球・ソフトボール", tags: ["廃盤・希少品"], note: "根強いファンが多い『青ビュー（ビューリーグ）』の硬式用限定モデル。革の破れ・ヘタリが少なく型も良かったため2,200円仕入れから利益3,710円。" },
+      { id: 55, name: "ミズノ グローブエリート Vコング TH 中学生硬式用 野球 バット", price: 11100, cost: 2200, profit: 6740, margin: 60, fee: 1110, shipping: 1050, genre: "野球・ソフトボール", tags: [], note: "中学硬式（ボーイズ・シニア等）の定番人気バット『VコングTH』。中学硬式用バットは新品が2.5万円以上するため、状態が良ければ中古でも1万円超えで飛ぶように売れる。" },
+      { id: 56, name: "ミズノプロ AX4 ソフトボール 3号 2020年秋冬 限定モデル バット", price: 37000, cost: 15400, profit: 16750, margin: 45, fee: 3700, shipping: 1150, genre: "野球・ソフトボール", tags: ["廃盤・希少品"], note: "ソフトボール3号の最高峰『ミズノプロ AX4』の限定カラーモデル。仕入れ15,400円とやや高めでも、限定モデルは3.7万円で売れるため一撃利益16,750円！" },
+      { id: 57, name: "SNAP スナップ クライミング ボルダリング クラッシュ マット", price: 21300, cost: 3300, profit: 13770, margin: 64, fee: 2130, shipping: 2100, genre: "釣り・アウトドア", tags: ["ジャンク棚・店舗盲点"], note: "外岩ボルダリング用の大型マット（クラッシュパッド）。フランスの人気ブランド『SNAP』が3,300円で放置されており、メルカリ便2,100円発送で利益13,770円。" },
+      { id: 58, name: "GULL ガル WARP ワープ フィン TRUE NORTH Lサイズ", price: 22400, cost: 1738, profit: 17372, margin: 77, fee: 2240, shipping: 1050, genre: "釣り・アウトドア", tags: ["ジャンク棚・店舗盲点"], note: "ダイビング界の最高峰フィン『GULL WARP（ワープフィン）』。店舗では『スポーツ全般』タグで1,738円だったが、ゴムの劣化・亀裂がなく22,400円で売却（利益率77%）。" },
+      { id: 59, name: "希少品 USA マクレガー 100MH アメリカンフットボール ヘルメット", price: 110200, cost: 5478, profit: 92652, margin: 84, fee: 11020, shipping: 1050, genre: "その他お宝", tags: ["廃盤・希少品", "ジャンク棚・店舗盲点"], note: "【本データ最高額・一撃利益92,652円！】ヴィンテージUSA製マクレガーのアメフトヘルメット。5,478円仕入れから110,200円で落札された伝説の目利き事例。" },
+      { id: 60, name: "RHINO ライノ アルミ 背負子 親子 登山 トレッキング リュック", price: 6780, cost: 1650, profit: 3252, margin: 47, fee: 678, shipping: 1200, genre: "釣り・アウトドア", tags: ["廃盤・希少品"], note: "オフハウスで見つけたレトロなアルミフレーム製『ベビーキャリア（背負子）』。アルミの歪みやベルトの破損がないことを確認し、アウトドア好きに6,780円で成約。" }
+    ];
+
+    // ==========================================
+    // 2. 現場目利きチェックリストデータ
+    // ==========================================
+    const CHECKLIST_DATA = {
+      baseball: [
+        { id: "bb-1", title: "【鉄則】打感・捕球感などの競技知識は一切考えない", desc: "見るべきは『人気メーカーか？』『通常使用できる状態か？』の2点だけ。" },
+        { id: "bb-2", title: "グローブ：捕球面の破れ・致命的な紐切れがないか", desc: "汚れや擦れは問題なし。平裏のヒビ割れや指袋の破れがなければOK。" },
+        { id: "bb-3", title: "バット：ウレタン部の亀裂・凹み・カラカラ音がないか", desc: "ビヨンドマックス等のウレタン割れはNG。塗装ハゲやグリップ劣化は問題なし。" },
+        { id: "bb-4", title: "高値メーカー＆希少属性の刻印を確認したか", desc: "ミズノプロ・ZETT・SSK・ベルガード・廃盤ナイキ・左投げ・中学硬式・ソフト3号は要チェック。" },
+        { id: "bb-5", title: "防具・練習器具の『まとめ売り』ができないか探す", desc: "マスク＋プロテクター、素振りバット複数本、ヘルメット2個など同一店舗内でセット化。" }
+      ],
+      tennis: [
+        { id: "tn-1", title: "【即NG】フレーム内側・外側にヒビ・折れ・修理跡がないか", desc: "ガットで形を保っているだけの隠れ折れ・変形がないか全周を目視＆指で触って確認。" },
+        { id: "tn-2", title: "【履歴照合】バンパーガード破損時は過去相場を確認", desc: "ヘッド上部の削れ・破損があっても、人気・廃盤モデルなら破損あり履歴で利益計算。" },
+        { id: "tn-3", title: "【許容OK】グロメット破損はプレー影響小のため仕入れ対象", desc: "多少の欠け・変形があっても相場への影響は軽微。レアモデルなら迷わず仕入れ。" },
+        { id: "tn-4", title: "【お宝サイン】グリップ劣化・店舗ビニール巻きは見逃さない", desc: "100円以下の互換グリップテープをおまけ添付して出品すれば減額なしで高値成約！" },
+        { id: "tn-5", title: "【お宝サイン】ガット切れ・無しでもそのまま仕入れOK", desc: "購入者が好みに張り替えるため減額なし。切れたガットはハサミで十字に切って外す。" }
+      ],
+      tactics: [
+        { id: "tc-1", title: "『ジャンク全般』『スポーツその他』棚を真っ先にチェック", desc: "店員が相場を知らず一律550円〜2,200円で値付けするお宝の宝庫。" },
+        { id: "tc-2", title: "単体で利益が薄い商品は『2点〜10点セット』にできないか", desc: "送料を1回分に圧縮し、ライバル不在のオリジナルカタログを作って利益率50%超へ。" },
+        { id: "tc-3", title: "付属品・収納袋・オプションパーツの同梱を見落としていないか", desc: "LAVAマットのケースやヘラ台のステップなど、袋の裏や別棚の付属品も確認。" },
+        { id: "tc-4", title: "廃盤・撤退ブランド（ナイキ野球/ゴルフ・黒蝶卓球等）か", desc: "メーカー撤退品や旧ロゴ品は型番検索では出ないプレミアム価格がつく。" },
+        { id: "tc-5", title: "大型商品でも『メルカリ便（100〜160サイズ）』に収まるか", desc: "鉄棒・ボールカゴ・クラッシュマットも全国一律送料なら圧倒的な利益が残る。" }
+      ]
+    };
+
+    // ==========================================
+    // 3. 会員限定ノウハウ記事データ（全6本）
+    // ==========================================
+    const ARTICLES_DATA = [
+      {
+        id: 1,
+        badge: "第1章｜市場選定",
+        title: "なぜスポーツ中古せどりは「ライバル不在の独占市場」で稼げるのか？",
+        summary: "AIやJANコード・型番リサーチに頼る一般せどらーが勝手にあきらめて撤退する3つの理由と、メルカリ送料の優位性を解説。",
+        points: [
+          "型番やバーコードがない商品が多く、機械的なリサーチツール勢が参入できない",
+          "「競技経験や専門知識がないと目利きできない」という先入観が強力な参入障壁になっている",
+          "大型スポーツ用品（鉄棒・マット・ラケット・バット等）でもメルカリ便なら全国一律の格安送料で発送でき、他販路より圧倒的に利益が残る"
+        ]
+      },
+      {
+        id: 2,
+        badge: "第2章｜利益最大化戦術",
+        title: "薄利商品を「利益率60%超えのお宝」に変えるセット売り・まとめ売りの極意",
+        summary: "店舗で550円〜1,320円で放置されている単品商品を掛け合わせ、ライバルゼロの商品ページを作る具体的な組み合わせパターン。",
+        points: [
+          "【同種複数セット】少年用バット2本、硬式テニスラケット2本、左打者用ヘルメット2個など",
+          "【関連アイテム一式セット】審判用マスク＋プロテクター、打者用エルボー＋レッグガード、練習用バット5点セット",
+          "【消耗品バルクセット】ゴルフグリップ10本、SIXPADジェルシート4箱、ビブス10枚など送料を1回に圧縮して利益爆発"
+        ]
+      },
+      {
+        id: 3,
+        badge: "第3章｜店舗リサーチ術",
+        title: "店舗のどこを見るべきか？「ジャンク棚・スポーツその他コーナー」完全攻略法",
+        summary: "リサイクルショップ（ブックオフ・オフハウス・トレファク等）の査定の盲点を突き、値付けミスのお宝を抜き取る動線。",
+        points: [
+          "店員がジャンル判別できないマイナー競技（アメフト・ダイビングフィン・フラダンス楽器・クライミング等）は『その他』棚に激安で置かれる",
+          "電化製品やパーツ類は『ジャンク全般』棚に置かれやすいため、その場で通電・パーツ欠品チェックを行えば完動品価格で売却可能",
+          "グリップ劣化でビニールが巻かれたラケットや、汚れがついたままのグローブは相場より大幅に安く値付けされやすい"
+        ]
+      },
+      {
+        id: 4,
+        badge: "第4章｜出品効率化・テンプレ",
+        title: "作業時間を半分にして高値で売り切る！商品説明文テンプレート＆出品のコツ",
+        summary: "コメント対応の手間を減らし、購入者の不安を先回りして解消するタカヤ式・出品テンプレートをそのまま公開。",
+        points: [
+          "専門的な使用感（打感や捕球感）は聞かれても「中古仕入れのため実使用はしておりません」と誠実に割り切る",
+          "タイトルには『メーカー名（英語＋カタカナ）＋モデル名＋用途＋サイズ＋競技名』を詰め込み検索流入を最大化",
+          "以下のテンプレートをコピーして、【】内を書き換えるだけで即出品完了！"
+        ],
+        template: `ご覧いただきありがとうございます！\n\n【メーカー名・モデル名・サイズ・右投げ/左投げ等】の出品です。\n\n■商品状態\n通常使用に伴う擦れや小傷はございますが、使用に支障をきたすような大きなダメージ（ヒビ・割れ・破れ等）はなく、まだまだ快適にご使用いただける状態です。\n※詳細な状態は掲載写真にてご確認ください。\n\n■付属品\n写真に写っているものが全てとなります。\n\n■発送について\nプチプチや巻きダンボール等で丁寧に梱包し、匿名配送（メルカリ便）にて迅速に発送いたします。\n\n即購入OKです！よろしくお願いいたします。`
+      },
+      {
+        id: 5,
+        badge: "第5章｜ジャンル別攻略①",
+        title: "野球・ソフトボール用品仕入れ完全ガイド（4大ターゲット＆見極め基準）",
+        summary: "最も商品数が多く稼ぎやすい野球ジャンルの攻略法。見るべき4つの柱と、チーム解散品などの大量仕入れチャンス。",
+        points: [
+          "仕入れ対象は【①グローブ】【②バット】【③防具】【④練習用品】の4種類に絞る",
+          "主力は商品数が多いグローブとバット。ミズノプロ・ZETT・SSK・ローリングス・廃盤ナイキ等を優先リサーチ",
+          "防具（キャッチャー・審判用）や練習器具（パワースラッガー・ネット等）はライバルが見ていないため利益率60%超えが連発する"
+        ]
+      },
+      {
+        id: 6,
+        badge: "第6章｜ジャンル別攻略②",
+        title: "テニスラケット仕入れ完全ガイド（9部位の名称＆5つの検品NGライン）",
+        summary: "店舗にずらっと並ぶラケットの中から、スペック暗記ゼロで利益商品だけを抜き取る実践検品マニュアル。",
+        points: [
+          "絶対に避けるべきNGは『フレームのヒビ・折れ・変形・修理跡』の1点のみ",
+          "『グリップテープの劣化』と『ガット切れ・無し』は相場にほぼ影響しないため、むしろ安く仕入れられるお宝サイン",
+          "1本100円以下の互換オーバーグリップテープをおまけで付属させると、見た目が劇的に良くなり高値で即売れする"
+        ]
+      }
+    ];
+
+    // ==========================================
+    // 4. 限定解説動画データ（全8本）
+    // ==========================================
+    const VIDEOS_DATA = [
+      { id: 1, category: "基礎・マインド編", duration: "14:20", title: "【第1回】スポーツ中古せどり全体像｜なぜAI・型番せどらーに勝てるのか？", desc: "リサイクルショップの実店舗でライバル不在の利益商品が生まれる構造と、初心者が最初に狙うべきジャンルを徹底解説。" },
+      { id: 2, category: "店舗仕入れ実践編", duration: "18:45", title: "【第2回】ブックオフ・オフハウス店舗同行リサーチ！利益商品の見つけ方", desc: "実際の店舗のスポーツコーナー・ジャンク棚を回りながら、値札のどこを見てどの順番でリサーチするかを実演。" },
+      { id: 3, category: "野球用品攻略編", duration: "16:10", title: "【第3回】野球グローブ＆バットの目利き基準｜NGラインと高値メーカー", desc: "ビヨンドマックス等のウレタンバット検品法と、捕球面・紐の状態から『通常使用OK』を瞬時に判断する基準を解説。" },
+      { id: 4, category: "テニスラケット編", duration: "15:30", title: "【第4回】テニスラケット9部位の名称＆折れ・ヒビの見抜き方実演", desc: "ガットが張られたまま折れているラケットの見分け方と、ボロボロのグリップをお宝に変えるメンテナンス術。" },
+      { id: 5, category: "利益爆増・戦術編", duration: "12:50", title: "【第5回】単価アップの魔法！薄利商品を利益率60%にするセット売り実例集", desc: "防具2点セット、バット複数本、消耗品まとめ売りなど、実際の販売履歴をもとにセット化の思考プロセスを公開。" },
+      { id: 6, category: "穴場ジャンル編", duration: "17:15", title: "【第6回】釣具・アウトドア・格闘技の盲点お宝リサーチ（へら竿・フィン・防具）", desc: "一撃利益1万〜5万円超えを生み出すヘラブナ用品、ダイビングフィン、空手メンホー等の見極めポイントを解説。" },
+      { id: 7, category: "出品・写真撮影編", duration: "13:40", title: "【第7回】スマホ1台で即売れ！高値で売れるサムネイル文字入れ＆撮影術", desc: "実売60選でも使われている『SOLD連発の1枚目画像』の作り方と、クレームをゼロにする傷箇所の撮影テクニック。" },
+      { id: 8, category: "梱包・発送効率編", duration: "11:25", title: "【第8回】長尺バット・ラケット・大型器具を最安送料で安全に梱包する方法", desc: "巻きダンボールとプチプチを使ったバット・ラケットの爆速梱包法と、メルカリ便サイズ最適化のコツ。" }
+    ];
+
+    // ==========================================
+    // 状態管理変数
+    // ==========================================
+    let activeGenre = "すべて";
+    let activeTactic = "すべて";
+    let currentModalProduct = null;
+    let checkedItems = JSON.parse(localStorage.getItem("takaya_checklist_v1") || "{}");
+    let watchedVideos = JSON.parse(localStorage.getItem("takaya_videos_v1") || "{}");
+    let starterStepsDone = JSON.parse(localStorage.getItem("takaya_starter_v1") || "{}");
+
+    // 初心者入門セット・厳選鉄板10商品ID（仕入れ3,000円以下で再現性の高い代表例）
+    const STARTER_TOP10_IDS = [1, 3, 5, 6, 8, 17, 18, 21, 24, 42];
+
+    const GENRES = ["すべて", "野球・ソフトボール", "テニス・卓球", "釣り・アウトドア", "格闘技・フィットネス", "その他お宝"];
+    const TACTICS = ["すべて", "セット売り・まとめ売り", "廃盤・希少品", "ジャンク棚・店舗盲点", "未使用・付属品完備"];
+
+    // ==========================================
+    // 初期化処理
+    // ==========================================
+    document.addEventListener("DOMContentLoaded", () => {
+      renderFilterButtons();
+      renderDatabase();
+      renderChecklists();
+      renderArticles();
+      renderVideos();
+      renderStarterKit();
+      lucide.createIcons();
+    });
+
+    // ==========================================
+    // タブ切り替え制御
+    // ==========================================
+    function switchTab(tabName) {
+      const tabs = ["starter", "db", "checklist", "articles", "videos"];
+      tabs.forEach(t => {
+        const panel = document.getElementById(`panel-${t}`);
+        const btn = document.getElementById(`tab-btn-${t}`);
+        if (t === tabName) {
+          panel.classList.remove("hidden");
+          btn.classList.add("tab-active");
+          btn.classList.remove("bg-navy-800/80", "hover:bg-navy-700", "text-slate-300", "bg-gradient-to-r", "from-amber-500/20", "to-profit-500/20", "border", "border-amber-400/40", "text-amber-300");
+        } else {
+          panel.classList.add("hidden");
+          btn.classList.remove("tab-active");
+          if (t === "starter") {
+            btn.classList.add("bg-gradient-to-r", "from-amber-500/20", "to-profit-500/20", "border", "border-amber-400/40", "text-amber-300");
+          } else {
+            btn.classList.add("bg-navy-800/80", "hover:bg-navy-700", "text-slate-300");
+          }
+        }
+      });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      lucide.createIcons();
+    }
+
+    // ==========================================
+    // 初心者入門セット（描画・進捗管理・連携ジャンプ）
+    // ==========================================
+    function renderStarterKit() {
+      // 4ステップ進捗バー更新
+      const doneCount = [1, 2, 3, 4].filter(n => starterStepsDone[n]).length;
+      const pct = Math.round((doneCount / 4) * 100);
+      document.getElementById("starter-progress-text").textContent = `${doneCount} / 4 STEP完了`;
+      document.getElementById("starter-progress-bar").style.width = `${pct}%`;
+      document.getElementById("starter-progress-msg").textContent =
+        doneCount === 4
+          ? "🎉 予習コンプリート！現場目利きチェックリストを持って店舗へ出発しましょう！"
+          : `残り ${4 - doneCount} ステップで店舗デビュー準備完了！`;
+
+      // 各ステップボタン状態更新
+      [1, 2, 3, 4].forEach(stepNum => {
+        const btn = document.getElementById(`starter-btn-${stepNum}`);
+        const isDone = !!starterStepsDone[stepNum];
+        if (isDone) {
+          btn.className = "self-start sm:self-auto px-4 py-2 rounded-xl text-xs font-bold bg-profit-500/20 text-profit-400 border border-profit-500/40 flex items-center gap-1.5 transition cursor-pointer";
+          btn.innerHTML = `<i data-lucide="check-circle-2" class="w-4 h-4"></i> <span>STEP ${stepNum} 予習完了済み</span>`;
+        } else {
+          btn.className = "self-start sm:self-auto px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-200 flex items-center gap-1.5 transition cursor-pointer";
+          btn.innerHTML = `<i data-lucide="circle" class="w-4 h-4"></i> <span>STEP ${stepNum} 完了にする</span>`;
+        }
+      });
+
+      // 厳選10商品のレンダリング
+      const top10Container = document.getElementById("starter-top10-grid");
+      const top10Items = STARTER_TOP10_IDS.map(id => PRODUCTS_DATA.find(p => p.id === id)).filter(Boolean);
+
+      top10Container.innerHTML = top10Items.map(item => `
+        <div
+          onclick="openProductModal(${item.id})"
+          class="bg-navy-950/90 hover:border-amber-400/60 border border-slate-800 rounded-xl p-3.5 flex flex-col justify-between gap-2.5 transition cursor-pointer group"
+        >
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-1.5">
+              <div class="flex items-center gap-1.5">
+                <span class="font-display text-[11px] font-extrabold px-2 py-0.5 rounded bg-navy-900 text-slate-300 border border-slate-700">No.${String(item.id).padStart(2, '0')}</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded ${getGenreBadgeStyle(item.genre)}">${item.genre}</span>
+              </div>
+              <span class="font-display text-sm font-black text-profit-400">+¥${item.profit.toLocaleString()} <span class="text-[11px] text-amber-400">(${item.margin}%)</span></span>
+            </div>
+            <h4 class="text-xs sm:text-sm font-bold text-white group-hover:text-amber-300 transition line-clamp-1">${item.name}</h4>
+          </div>
+          <div class="flex items-center justify-between text-[11px] pt-2 border-t border-slate-800/80">
+            <span class="text-slate-400">仕入 <strong class="font-display text-rose-400">¥${item.cost.toLocaleString()}</strong> → 販売 <strong class="font-display text-white">¥${item.price.toLocaleString()}</strong></span>
+            <span class="text-amber-300 font-bold flex items-center gap-0.5">目利きポイント <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></span>
+          </div>
+        </div>
+      `).join("");
+
+      lucide.createIcons();
+    }
+
+    function toggleStarterStep(stepNum) {
+      starterStepsDone[stepNum] = !starterStepsDone[stepNum];
+      localStorage.setItem("takaya_starter_v1", JSON.stringify(starterStepsDone));
+      renderStarterKit();
+      if (starterStepsDone[stepNum]) {
+        showToast(`STEP ${stepNum} を予習完了にしました！`);
+      }
+    }
+
+    function jumpToDbWithTactic(tacticName) {
+      activeGenre = "すべて";
+      activeTactic = tacticName;
+      document.getElementById("search-input").value = "";
+      renderFilterButtons();
+      renderDatabase();
+      switchTab("db");
+      showToast(`「#${tacticName}」で実売データを絞り込みました`);
+    }
+
+    function jumpToArticle(articleId) {
+      switchTab("articles");
+      const body = document.getElementById(`art-body-${articleId}`);
+      const icon = document.getElementById(`art-icon-${articleId}`);
+      if (body && body.classList.contains("hidden")) {
+        body.classList.remove("hidden");
+        if (icon) icon.classList.add("rotate-180");
+      }
+    }
+
+    // ==========================================
+    // 実売60選データベース：フィルター＆描画ロジック
+    // ==========================================
+    function getGenreBadgeStyle(genre) {
+      switch (genre) {
+        case "野球・ソフトボール":
+          return "bg-energy-500/20 text-energy-400 border border-energy-500/30";
+        case "テニス・卓球":
+          return "bg-profit-500/20 text-profit-400 border border-profit-500/30";
+        case "釣り・アウトドア":
+          return "bg-sky-500/20 text-sky-400 border border-sky-500/30";
+        case "格闘技・フィットネス":
+          return "bg-purple-500/20 text-purple-400 border border-purple-500/30";
+        default:
+          return "bg-amber-500/20 text-amber-300 border border-amber-500/30";
+      }
+    }
+
+    function renderFilterButtons() {
+      const genreContainer = document.getElementById("genre-filters");
+      const tacticContainer = document.getElementById("tactic-filters");
+
+      genreContainer.innerHTML = GENRES.map(genre => {
+        const isActive = activeGenre === genre;
+        const count = genre === "すべて"
+          ? PRODUCTS_DATA.length
+          : PRODUCTS_DATA.filter(p => p.genre === genre).length;
+        return `
+          <button
+            onclick="selectGenre('${genre}')"
+            class="px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer flex items-center gap-1.5 ${
+              isActive
+                ? "bg-energy-500 text-white shadow-md shadow-energy-500/25"
+                : "bg-navy-950/90 hover:bg-navy-800 text-slate-300 border border-slate-800"
+            }"
+          >
+            <span>${genre}</span>
+            <span class="font-display text-[10px] px-1.5 py-0.2 rounded-full ${isActive ? "bg-black/25 text-white" : "bg-slate-800 text-slate-400"}">${count}</span>
+          </button>
+        `;
+      }).join("");
+
+      tacticContainer.innerHTML = TACTICS.map(tactic => {
+        const isActive = activeTactic === tactic;
+        const count = tactic === "すべて"
+          ? PRODUCTS_DATA.length
+          : PRODUCTS_DATA.filter(p => p.tags.includes(tactic)).length;
+        return `
+          <button
+            onclick="selectTactic('${tactic}')"
+            class="px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer flex items-center gap-1.5 ${
+              isActive
+                ? "bg-profit-600 text-white shadow-md shadow-profit-500/25"
+                : "bg-navy-950/90 hover:bg-navy-800 text-slate-300 border border-slate-800"
+            }"
+          >
+            <span>${tactic === "すべて" ? "すべて表示" : "#" + tactic}</span>
+            <span class="font-display text-[10px] px-1.5 py-0.2 rounded-full ${isActive ? "bg-black/25 text-white" : "bg-slate-800 text-slate-400"}">${count}</span>
+          </button>
+        `;
+      }).join("");
+    }
+
+    function selectGenre(genre) {
+      activeGenre = genre;
+      renderFilterButtons();
+      renderDatabase();
+    }
+
+    function selectTactic(tactic) {
+      activeTactic = tactic;
+      renderFilterButtons();
+      renderDatabase();
+    }
+
+    function clearSearch() {
+      document.getElementById("search-input").value = "";
+      renderDatabase();
+    }
+
+    function renderDatabase() {
+      const searchInput = document.getElementById("search-input");
+      const clearBtn = document.getElementById("clear-search-btn");
+      const query = searchInput.value.trim().toLowerCase();
+      const sortValue = document.getElementById("sort-select").value;
+
+      if (query.length > 0) {
+        clearBtn.classList.remove("hidden");
+      } else {
+        clearBtn.classList.add("hidden");
+      }
+
+      // フィルタリング
+      let filtered = PRODUCTS_DATA.filter(item => {
+        const matchGenre = activeGenre === "すべて" || item.genre === activeGenre;
+        const matchTactic = activeTactic === "すべて" || item.tags.includes(activeTactic);
+        const matchQuery =
+          !query ||
+          item.name.toLowerCase().includes(query) ||
+          item.genre.toLowerCase().includes(query) ||
+          item.note.toLowerCase().includes(query) ||
+          item.tags.some(t => t.toLowerCase().includes(query));
+        return matchGenre && matchTactic && matchQuery;
+      });
+
+      // ソート
+      filtered.sort((a, b) => {
+        switch (sortValue) {
+          case "profit-desc":
+            return b.profit - a.profit;
+          case "margin-desc":
+            return b.margin - a.margin;
+          case "cost-asc":
+            return a.cost - b.cost;
+          case "price-desc":
+            return b.price - a.price;
+          default:
+            return a.id - b.id;
+        }
+      });
+
+      // KPI集計更新
+      const count = filtered.length;
+      const totalProfit = filtered.reduce((sum, item) => sum + item.profit, 0);
+      const avgProfit = count > 0 ? Math.round(totalProfit / count) : 0;
+      const avgMargin = count > 0
+        ? (filtered.reduce((sum, item) => sum + item.margin, 0) / count).toFixed(1)
+        : "0.0";
+
+      document.getElementById("filtered-count").textContent = count;
+      document.getElementById("filtered-total-profit").textContent = `¥${totalProfit.toLocaleString()}`;
+      document.getElementById("filtered-avg-profit").textContent = `¥${avgProfit.toLocaleString()}`;
+      document.getElementById("filtered-avg-margin").textContent = `${avgMargin}%`;
+
+      // カード描画
+      const grid = document.getElementById("product-grid");
+      if (count === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full glass-card rounded-2xl p-10 text-center space-y-3">
+            <div class="text-3xl">🔍</div>
+            <h3 class="text-base font-bold text-white">該当する実売データが見つかりませんでした</h3>
+            <p class="text-xs text-slate-400">検索キーワードや絞り込み条件を変更して再度お試しください。</p>
+            <button onclick="resetAllFilters()" class="px-4 py-2 rounded-xl bg-energy-500 hover:bg-energy-600 text-white text-xs font-bold cursor-pointer">
+              すべての絞り込みを解除
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(item => `
+        <article
+          onclick="openProductModal(${item.id})"
+          class="glass-card hover:border-energy-500/60 rounded-2xl p-4 sm:p-5 flex flex-col justify-between gap-4 transition-all duration-200 cursor-pointer group hover:-translate-y-0.5 shadow-lg"
+        >
+          <div class="space-y-2.5">
+            <!-- 上段バッジ -->
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="font-display text-xs font-extrabold px-2.5 py-0.5 rounded-lg bg-navy-950 text-slate-300 border border-slate-700">
+                  No.${String(item.id).padStart(2, '0')}
+                </span>
+                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-lg ${getGenreBadgeStyle(item.genre)}">
+                  ${item.genre}
+                </span>
+              </div>
+              <span class="font-display text-xs font-extrabold px-2 py-0.5 rounded-lg bg-amber-400/15 text-amber-300 border border-amber-400/30">
+                利益率 ${item.margin}%
+              </span>
+            </div>
+
+            <!-- 商品タイトル -->
+            <h3 class="text-sm sm:text-base font-bold text-white group-hover:text-energy-400 transition leading-snug line-clamp-2">
+              ${item.name}
+            </h3>
+
+            <!-- 戦術タグ -->
+            ${item.tags.length > 0 ? `
+              <div class="flex flex-wrap gap-1.5">
+                ${item.tags.map(tag => `
+                  <span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-profit-500/15 text-profit-400 border border-profit-500/25">
+                    #${tag}
+                  </span>
+                `).join("")}
+              </div>
+            ` : ""}
+
+            <!-- 目利き抜粋 -->
+            <p class="text-xs text-slate-400 line-clamp-2 leading-relaxed">
+              ${item.note}
+            </p>
+          </div>
+
+          <!-- 下段収支ボックス -->
+          <div class="pt-3 border-t border-slate-800/90 space-y-2">
+            <div class="flex items-end justify-between">
+              <div>
+                <div class="text-[10px] text-slate-400">純利益（手残り）</div>
+                <div class="font-display text-xl sm:text-2xl font-black text-profit-400">
+                  +¥${item.profit.toLocaleString()}
+                </div>
+              </div>
+              <div class="text-right text-xs space-y-0.5">
+                <div class="text-slate-400">販売: <strong class="font-display text-white">¥${item.price.toLocaleString()}</strong></div>
+                <div class="text-slate-400">仕入: <strong class="font-display text-rose-400">¥${item.cost.toLocaleString()}</strong></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between text-[11px] text-slate-400 pt-1">
+              <span>手数料 ¥${item.fee.toLocaleString()} / 送料 ¥${item.shipping.toLocaleString()}</span>
+              <span class="text-energy-400 font-bold flex items-center gap-0.5 group-hover:translate-x-0.5 transition-transform">
+                詳細を見る <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+              </span>
+            </div>
+          </div>
+        </article>
+      `).join("");
+
+      lucide.createIcons();
+    }
+
+    function resetAllFilters() {
+      activeGenre = "すべて";
+      activeTactic = "すべて";
+      document.getElementById("search-input").value = "";
+      document.getElementById("sort-select").value = "id-asc";
+      renderFilterButtons();
+      renderDatabase();
+    }
+
+    // ==========================================
+    // 商品詳細モーダル制御
+    // ==========================================
+    function openProductModal(id) {
+      const item = PRODUCTS_DATA.find(p => p.id === id);
+      if (!item) return;
+      currentModalProduct = item;
+
+      document.getElementById("modal-no").textContent = `No.${String(item.id).padStart(2, '0')}`;
+      document.getElementById("modal-genre").textContent = item.genre;
+      document.getElementById("modal-title").textContent = item.name;
+      document.getElementById("modal-profit").textContent = `+¥${item.profit.toLocaleString()}`;
+      document.getElementById("modal-margin").textContent = `${item.margin}%`;
+      document.getElementById("modal-price").textContent = `¥${item.price.toLocaleString()}`;
+      document.getElementById("modal-cost").textContent = `¥${item.cost.toLocaleString()}`;
+      document.getElementById("modal-fee").textContent = `¥${item.fee.toLocaleString()}`;
+      document.getElementById("modal-shipping").textContent = `¥${item.shipping.toLocaleString()}`;
+      document.getElementById("modal-note").textContent = item.note;
+
+      const tagsContainer = document.getElementById("modal-tags");
+      tagsContainer.innerHTML = item.tags.map(tag => `
+        <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-lg bg-profit-500/20 text-profit-400 border border-profit-500/30">
+          #${tag}
+        </span>
+      `).join("");
+
+      const modal = document.getElementById("product-modal");
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      lucide.createIcons();
+    }
+
+    function closeProductModal() {
+      const modal = document.getElementById("product-modal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      currentModalProduct = null;
+    }
+
+    function closeModalOnBackdrop(event) {
+      if (event.target.id === "product-modal") {
+        closeProductModal();
+      }
+    }
+
+    function copyModalTitle() {
+      if (!currentModalProduct) return;
+      copyTextToClipboard(currentModalProduct.name, "商品名をクリップボードにコピーしました！");
+    }
+
+    // ==========================================
+    // 現場目利きチェックリスト描画＆状態保存
+    // ==========================================
+    function renderChecklists() {
+      const categories = [
+        { key: "baseball", containerId: "checklist-baseball" },
+        { key: "tennis", containerId: "checklist-tennis" },
+        { key: "tactics", containerId: "checklist-tactics" }
+      ];
+
+      categories.forEach(({ key, containerId }) => {
+        const container = document.getElementById(containerId);
+        container.innerHTML = CHECKLIST_DATA[key].map(item => {
+          const isChecked = !!checkedItems[item.id];
+          return `
+            <div
+              onclick="toggleCheckItem('${item.id}')"
+              class="p-3 rounded-xl border transition cursor-pointer flex items-start gap-3 ${
+                isChecked
+                  ? "bg-profit-500/10 border-profit-500/40"
+                  : "bg-navy-900/90 hover:bg-navy-800 border-slate-800"
+              }"
+            >
+              <div class="mt-0.5 shrink-0 ${isChecked ? "text-profit-400" : "text-slate-500"}">
+                <i data-lucide="${isChecked ? "check-square" : "square"}" class="w-4 h-4"></i>
+              </div>
+              <div class="space-y-1">
+                <div class="text-xs sm:text-sm font-bold leading-snug ${isChecked ? "text-profit-300 line-through opacity-80" : "text-white"}">
+                  ${item.title}
+                </div>
+                <p class="text-[11px] text-slate-400 leading-relaxed">${item.desc}</p>
+              </div>
+            </div>
+          `;
+        }).join("");
+      });
+      lucide.createIcons();
+    }
+
+    function toggleCheckItem(id) {
+      checkedItems[id] = !checkedItems[id];
+      localStorage.setItem("takaya_checklist_v1", JSON.stringify(checkedItems));
+      renderChecklists();
+    }
+
+    function resetChecklist() {
+      checkedItems = {};
+      localStorage.setItem("takaya_checklist_v1", JSON.stringify(checkedItems));
+      renderChecklists();
+      showToast("チェックリストをリセットしました");
+    }
+
+    // ==========================================
+    // 限定ノウハウ記事アーカイブ描画
+    // ==========================================
+    function renderArticles() {
+      const container = document.getElementById("articles-list");
+      container.innerHTML = ARTICLES_DATA.map((art, index) => `
+        <div class="bg-navy-950/90 border border-slate-800 rounded-2xl overflow-hidden">
+          <button
+            onclick="toggleArticle(${art.id})"
+            class="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 hover:bg-navy-900/60 transition cursor-pointer"
+          >
+            <div class="space-y-1">
+              <span class="inline-block text-[11px] font-extrabold px-2.5 py-0.5 rounded-lg bg-sky-500/20 text-sky-300 border border-sky-500/30">
+                ${art.badge}
+              </span>
+              <h3 class="text-base sm:text-lg font-black text-white">${art.title}</h3>
+              <p class="text-xs text-slate-400">${art.summary}</p>
+            </div>
+            <i id="art-icon-${art.id}" data-lucide="chevron-down" class="w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200 ${index === 0 ? "rotate-180" : ""}"></i>
+          </button>
+
+          <div id="art-body-${art.id}" class="${index === 0 ? "" : "hidden"} px-4 sm:px-5 pb-5 pt-2 border-t border-slate-800/80 space-y-4">
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-200">
+              ${art.points.map(pt => `
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-profit-400 shrink-0 mt-0.5"></i>
+                  <span class="leading-relaxed">${pt}</span>
+                </li>
+              `).join("")}
+            </ul>
+
+            ${art.template ? `
+              <div class="bg-navy-900 border border-slate-700 rounded-xl p-4 space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold text-energy-400 flex items-center gap-1.5">
+                    <i data-lucide="file-text" class="w-4 h-4"></i> 即コピペ用・商品説明文テンプレート
+                  </span>
+                  <button
+                    onclick="copyTemplateText()"
+                    class="px-3 py-1.5 rounded-lg bg-energy-500 hover:bg-energy-600 text-white text-xs font-bold flex items-center gap-1.5 transition cursor-pointer"
+                  >
+                    <i data-lucide="copy" class="w-3.5 h-3.5"></i> テンプレをコピー
+                  </button>
+                </div>
+                <pre id="listing-template-box" class="text-xs text-slate-300 whitespace-pre-wrap font-sans bg-navy-950 p-3.5 rounded-lg border border-slate-800 leading-relaxed">${art.template}</pre>
+              </div>
+            ` : ""}
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function toggleArticle(id) {
+      const body = document.getElementById(`art-body-${id}`);
+      const icon = document.getElementById(`art-icon-${id}`);
+      if (!body) return;
+      body.classList.toggle("hidden");
+      if (icon) icon.classList.toggle("rotate-180");
+    }
+
+    function copyTemplateText() {
+      const artWithTpl = ARTICLES_DATA.find(a => a.template);
+      if (artWithTpl) {
+        copyTextToClipboard(artWithTpl.template, "出品テンプレートをコピーしました！");
+      }
+    }
+
+    // ==========================================
+    // 限定解説動画アーカイブ描画＆視聴進捗管理
+    // ==========================================
+    function renderVideos() {
+      const watchedCount = VIDEOS_DATA.filter(v => watchedVideos[v.id]).length;
+      const pct = Math.round((watchedCount / VIDEOS_DATA.length) * 100);
+      document.getElementById("video-progress-text").textContent = `${watchedCount} / ${VIDEOS_DATA.length}本 (${pct}%)`;
+      document.getElementById("video-progress-bar").style.width = `${pct}%`;
+
+      const grid = document.getElementById("videos-grid");
+      grid.innerHTML = VIDEOS_DATA.map(video => {
+        const isWatched = !!watchedVideos[video.id];
+        return `
+          <div class="bg-navy-950/90 border ${isWatched ? "border-profit-500/40" : "border-slate-800"} rounded-2xl p-4 sm:p-5 flex flex-col justify-between gap-4">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-lg bg-energy-500/20 text-energy-400 border border-energy-500/30">
+                  ${video.category}
+                </span>
+                <span class="font-display text-xs text-slate-400 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i> ${video.duration}
+                </span>
+              </div>
+              <h3 class="text-sm sm:text-base font-black text-white leading-snug">${video.title}</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">${video.desc}</p>
+            </div>
+
+            <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between gap-2">
+              <button
+                onclick="toggleVideoWatched(${video.id})"
+                class="w-full py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition cursor-pointer ${
+                  isWatched
+                    ? "bg-profit-500/20 text-profit-400 border border-profit-500/40"
+                    : "bg-slate-800 hover:bg-slate-700 text-slate-200"
+                }"
+              >
+                <i data-lucide="${isWatched ? "check-circle-2" : "play-circle"}" class="w-4 h-4"></i>
+                <span>${isWatched ? "視聴完了済み（クリックで解除）" : "視聴完了にする"}</span>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join("");
+      lucide.createIcons();
+    }
+
+    function toggleVideoWatched(id) {
+      watchedVideos[id] = !watchedVideos[id];
+      localStorage.setItem("takaya_videos_v1", JSON.stringify(watchedVideos));
+      renderVideos();
+      if (watchedVideos[id]) {
+        showToast("動画を視聴完了として記録しました！");
+      }
+    }
+
+    // ==========================================
+    // クリップボードコピー＆トースト通知（iframe安全設計）
+    // ==========================================
+    function copyTextToClipboard(text, message) {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.style.position = "fixed";
+      textarea.style.opacity = "0";
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand("copy");
+        showToast(message);
+      } catch (err) {
+        showToast("コピーに失敗しました");
+      }
+      document.body.removeChild(textarea);
+    }
+
+    let toastTimer = null;
+    function showToast(msg) {
+      const toast = document.getElementById("toast");
+      const toastMsg = document.getElementById("toast-message");
+      toastMsg.textContent = msg;
+      toast.classList.remove("hidden");
+      toast.classList.add("flex");
+
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.add("hidden");
+        toast.classList.remove("flex");
+      }, 2600);
+    }
+
+    // ==========================================
+    // 配布用単一HTMLファイル直接ダウンロード機能
+    // ==========================================
+    function downloadStandaloneHtml() {
+      const doctype = "<!DOCTYPE html>\n";
+      const htmlContent = doctype + document.documentElement.outerHTML;
+      const blob = new Blob(["\uFEFF" + htmlContent], { type: "text/html;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "index.html";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast("配布用 index.html をダウンロードしました！");
+    }
+  </script>
+</body>
+</html>
